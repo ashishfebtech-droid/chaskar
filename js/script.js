@@ -118,7 +118,7 @@ function updateRightCarousel(animate = true) {
   
   // Mobile check - agar mobile hai to gap 0, warna 10
   const isMobile = window.innerWidth <= 768;
-  const gap = isMobile ? 0 : 10; // CSS gap value
+  const gap = isMobile ? 15 : 10; // CSS gap value
   
   const offset = -(rightCurrentIndex * (imageWidth + gap));
   rightTrack.style.transform = `translateX(${offset}px)`;

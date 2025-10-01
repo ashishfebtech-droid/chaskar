@@ -274,18 +274,18 @@ p {
     height: auto;
     overflow: hidden;
     min-height: 250px;
-    padding: 10px;
   }
 
-  /* Mobile pe 1 image dikhao */
-  .carousel-track {
-    gap: 0;
+ .carousel-track {
+    gap: 15px; /* Jo gap chahiye */
+    justify-content: flex-start; /* Center nahi */
   }
 
   .carousel-track img {
-    width: 100% !important;
+    width: calc(100%) !important; /* Gap compensate karne ke liye */
     height: 250px;
     object-fit: cover;
+    flex-shrink: 0;
   }
 
   .header-inner {
