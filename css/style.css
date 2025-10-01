@@ -274,6 +274,7 @@ p {
     height: auto;
     overflow: hidden;
     min-height: 250px;
+    padding: 10px;
   }
 
   /* Mobile pe 1 image dikhao */
