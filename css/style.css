@@ -1,0 +1,338 @@
+:root {
+  --primary-color: #e0b56f;
+  --secondary-color: #222;
+  --button-hover: #e65c00;
+  --font-family: #fff;
+}
+
+
+
+/* ---------------- Reset ---------------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Syne", sans-serif;
+
+}
+
+/* ---------------- Wrapper ---------------- */
+.wrapper {
+  display: flex;
+  flex-direction: row;
+  max-width: 1350px;
+  margin: 0 auto;
+  box-sizing: border-box;
+  gap: 60px;
+
+}
+
+
+
+.content-left {
+  flex: 1.4;
+  /* dono div equal width */
+  display: flex;
+  flex-direction: column;
+
+  align-items: start;
+  gap: 15px;
+}
+
+
+.content-right {
+  flex: 1;
+  overflow: hidden;
+  min-height: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: end;
+  position: relative;
+}
+
+.carousel-track {
+  display: flex;
+  transition: transform 0.8s ease-in-out;
+  width: 100%;
+}
+
+.carousel-track img {
+  width: 100%;
+  /* one image at a time */
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.carousel-dots {
+  margin-top: 15px;
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+}
+
+.carousel-dots span {
+  display: block;
+  width: 12px;
+  height: 12px;
+  background-color: #ccc;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.carousel-dots span.active {
+  background-color: #ff6600;
+}
+
+
+.carousel-track {
+  display: flex;
+  /* row direction */
+  gap: 10px;
+  transition: transform 0.8s ease-in-out;
+  /* smooth slide */
+}
+
+.carousel-track img {
+  width: calc((100% / 3) - 6.66px);
+  /* 3 images visible */
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.carousel-track.no-transition {
+  transition: none !important;
+}
+
+
+
+h1 {
+  font-size: 55px;
+  color: var(--primary-color);
+  margin-bottom: 10px;
+  font-weight: 700;
+  text-align: left;
+}
+
+P {
+  width: 90%;
+
+  font-weight: 500;
+  line-height: 1.5;
+  text-align: justify;
+  margin-bottom: 20px;
+
+}
+
+/* ---------------- Header ---------------- */
+.main-header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  /* full width header */
+  left: 0;
+  background: transparent;
+  /* transparent bg */
+
+  z-index: 1000;
+}
+
+.header-inner {
+  max-width: 1350px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 0;
+  width: 100%;
+  color: #fff;
+  border-bottom: 2px solid #fff;
+}
+
+/* Logo */
+.logo img {
+  height: 80px;
+  width: auto;
+}
+
+/* Navbar */
+.navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+
+.navbar ul li a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.navbar ul li a:hover,
+.navbar ul li a.active {
+  color: #e0b56f;
+}
+
+.navbar ul li a.active {
+  font-weight: 600;
+  border-bottom: 2px solid #e0b56f;
+}
+
+/* Book Button */
+.btn-book {
+  padding: 16px 25px;
+  border: 1px solid #fff;
+  border-radius: 5px;
+  color: #fff;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.btn-book:hover {
+  background: #e0b56f;
+  border-color: #e0b56f;
+  color: #000;
+}
+
+/* Mobile Menu Toggle */
+.menu-toggle {
+  display: none;
+  font-size: 26px;  
+  cursor: pointer;
+  color: #000000;
+  padding: 8px 15px;
+  background-color: #fff;
+  border-radius: 8px;
+}
+
+/* ---------------- Hero Section ---------------- */
+.hero {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  /* text color */
+  font-weight: bold;
+  text-align: center;
+  padding-top: 100px;
+
+  /* background image will be handled by JS carousel */
+  background-size: cover;
+  background-position: center;
+  transition: background-image 1s ease-in-out;
+
+  /* simple black transparent overlay on top of carousel */
+  background-color: rgba(0, 0, 0, 0.568);
+  background-blend-mode: darken;
+}
+
+
+
+/* ---------------- Mobile Responsive ---------------- */
+@media (max-width: 768px) {
+  .logo img {
+    height: 50px;
+  }
+
+  /* Navbar hidden initially */
+  .navbar {
+    display: none;
+    position: absolute;
+    top: 70px;
+    right: 20px;
+    width: 200px;
+    background: rgba(0, 0, 0, 0.9);
+    border-radius: 8px;
+    flex-direction: column;
+    padding: 20px;
+    gap: 15px;
+    z-index: 1001;
+  }
+
+  .navbar.active {
+    display: flex;
+  }
+
+  .navbar ul {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  /* Hamburger menu */
+  .menu-toggle {
+    display: block;
+  }
+
+  /* Optional: hide book button on mobile */
+  .btn-book {
+    display: none;
+  }
+
+
+
+
+  .hero {
+    height: auto;
+    /* text color */
+    padding-top: 300px;
+
+
+  }
+
+  .wrapper {
+    flex-direction: column;
+    gap: 30px;
+    padding: 0 20px;
+  }
+
+
+  p {
+    width: 100%;
+  }
+
+
+  .wrapper {
+    flex-direction: column;
+    /* left top, right bottom */
+    align-items: flex-start;
+    /* children apne content ke hisaab se height le */
+  }
+
+  .content-left,
+  .content-right {
+    width: 100%;
+    /* full width */
+  }
+
+  .content-right {
+    display: block;
+    /* flex stretch avoid karne ke liye */
+    height: auto;
+    overflow: hidden;
+    /* content ke hisaab se height */
+  }
+
+  /* Carousel / images responsive */
+  .carousel-track,
+  .carousel-track img {
+    width: 100%;
+    height: auto;
+    /* parent height auto follow kare */
+  }
+
+
+
+  .header-inner {
+
+    padding: 20px 20px;
+
+  }
+
+}
