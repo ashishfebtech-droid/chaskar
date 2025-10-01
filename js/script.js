@@ -30,9 +30,11 @@ menuItems.forEach(link => {
 
 const hero = document.querySelector('.hero');
 const images = [
-  'https://picsum.photos/1920/1080?grayscale',
-  'https://picsum.photos/1920/1080?blur',
-  'https://picsum.photos/1920/1080?random=1'
+  'image/1.jpg',
+  'image/2.jpg',
+  'image/3.jpg',
+  'image/4.jpg',
+  'image/5.jpg',
 ];
 
 let current = 0;
@@ -67,12 +69,11 @@ setInterval(() => {
 // Sample images array - apne images ka path yahan dalo
 // Sample images array - apne images ka path yahan dalo
 const rightCarouselImages = [
-  'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800',
-  'https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=800',
-  'https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=800',
-  'https://images.unsplash.com/photo-1426604966848-d7adac402bff?w=800',
-  'https://images.unsplash.com/photo-1472214103451-9374bd1c798e?w=800',
-  'https://images.unsplash.com/photo-1501594907352-04cda38ebc29?w=800'
+  'image/1.jpg',
+  'image/2.jpg',
+  'image/3.jpg',
+  'image/4.jpg',
+  'image/5.jpg',
 ];
 
 const rightTrack = document.getElementById('right-carousel-track');

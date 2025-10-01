@@ -66,6 +66,7 @@ body {
   height: 100%;
   object-fit: cover;
   border-radius: 10px;
+  border-color: 10px solid #ffffff;
 }
 
 .carousel-dots {
@@ -103,6 +104,7 @@ body {
   height: 100%;
   object-fit: cover;
   border-radius: 10px;
+  border: 1px solid #ffffff;
 }
 
 .carousel-track.no-transition {
