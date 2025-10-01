@@ -194,3 +194,60 @@ rightTrack.addEventListener('mouseleave', startRightAutoSlide);
 
 // Handle window resize
 window.addEventListener('resize', () => updateRightCarousel(false));
+
+
+
+
+
+
+
+
+
+// about us section
+const counters = document.querySelectorAll('.counter');
+    const speed = 200;
+
+    counters.forEach(counter => {
+      const updateCount = () => {
+        const target = +counter.getAttribute('data-target');
+        const count = +counter.innerText;
+        const inc = target / speed;
+
+        if (count < target) {
+          counter.innerText = Math.ceil(count + inc);
+          setTimeout(updateCount, 1);
+        } else {
+          counter.innerText = target;
+        }
+      };
+
+      updateCount();
+    });
+
+    // Intersection Observer for animation on scroll
+    const aboutSection = document.querySelector('.about-section');
+    
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          counters.forEach(counter => {
+            counter.innerText = '0';
+            const updateCount = () => {
+              const target = +counter.getAttribute('data-target');
+              const count = +counter.innerText;
+              const inc = target / speed;
+
+              if (count < target) {
+                counter.innerText = Math.ceil(count + inc);
+                setTimeout(updateCount, 1);
+              } else {
+                counter.innerText = target;
+              }
+            };
+            updateCount();
+          });
+        }
+      });
+    }, { threshold: 0.5 });
+
+    observer.observe(aboutSection);
