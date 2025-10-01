@@ -66,8 +66,7 @@ setInterval(() => {
 
 
 
-// Sample images array - apne images ka path yahan dalo
-// Sample images array - apne images ka path yahan dalo
+/// Sample images array - apne images ka path yahan dalo
 const rightCarouselImages = [
   'image/1.jpg',
   'image/2.jpg',
@@ -116,7 +115,11 @@ function updateRightCarousel(animate = true) {
   }
   
   const imageWidth = rightTrack.querySelector('img').offsetWidth;
-  const gap = 10; // CSS gap value
+  
+  // Mobile check - agar mobile hai to gap 0, warna 10
+  const isMobile = window.innerWidth <= 768;
+  const gap = isMobile ? 0 : 10; // CSS gap value
+  
   const offset = -(rightCurrentIndex * (imageWidth + gap));
   rightTrack.style.transform = `translateX(${offset}px)`;
   
@@ -174,7 +177,7 @@ function prevRightSlide() {
 
 // Auto slide
 function startRightAutoSlide() {
-  rightAutoSlideInterval = setInterval(nextRightSlide, 5000); // 3 seconds
+  rightAutoSlideInterval = setInterval(nextRightSlide, 5000); // 5 seconds
 }
 
 function resetRightAutoSlide() {

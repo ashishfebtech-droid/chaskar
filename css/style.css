@@ -238,7 +238,7 @@ p {
   .hero {
     height: auto;
     min-height: 100vh;
-    padding-top: 100px;
+    padding-top: 300px;
     padding-bottom: 40px;
   }
 
@@ -249,7 +249,7 @@ p {
   }
 
   h1 {
-    font-size: 32px;
+    font-size: 40px;
     line-height: 1.2;
     margin-bottom: 15px;
     text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
@@ -262,11 +262,7 @@ p {
     text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
   }
 
-  .content-left {
-    padding: 20px;
-    background: rgba(0, 0, 0, 0.5);
-    border-radius: 10px;
-  }
+
 
   .content-left,
   .content-right {
