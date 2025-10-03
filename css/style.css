@@ -762,7 +762,7 @@ header.hidden {
 
 /* service section */
 .services-section {
-  padding: 150px 0;
+  padding: 100px 0;
   position: relative;
   overflow: hidden;
   background:
@@ -773,13 +773,16 @@ header.hidden {
   background-color: #000;
 }
 
+/* Optimized animated lines - Reduced on mobile */
 .animated-line {
   position: absolute;
   width: 1px;
   height: 100%;
-  background: rgba(255, 255, 255, 0.233);
+  background: rgba(255, 255, 255, 0.1);
   top: 0;
   z-index: 0;
+  /* Will-change for better performance */
+  will-change: transform;
 }
 
 .animated-line::before {
@@ -791,12 +794,15 @@ header.hidden {
   height: 120px;
   background: linear-gradient(180deg,
       transparent 0%,
-      rgba(255, 215, 0, 0.6) 30%,
-      rgba(255, 165, 0, 0.8) 50%,
-      rgba(255, 215, 0, 0.6) 70%,
+      rgba(255, 215, 0, 0.4) 30%,
+      rgba(255, 165, 0, 0.6) 50%,
+      rgba(255, 215, 0, 0.4) 70%,
       transparent 100%);
-  animation: lineFlow 4s linear infinite;
-  box-shadow: 0 0 20px rgba(255, 215, 0, 0.5);
+  animation: lineFlow 6s linear infinite;
+  /* Performance optimizations */
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  perspective: 1000;
 }
 
 .line-1 {
@@ -812,7 +818,7 @@ header.hidden {
 }
 
 .line-2::before {
-  animation-delay: 1.3s;
+  animation-delay: 2s;
 }
 
 .line-3 {
@@ -820,15 +826,16 @@ header.hidden {
 }
 
 .line-3::before {
-  animation-delay: 2.6s;
+  animation-delay: 4s;
 }
 
+/* Smoother animation with steps */
 @keyframes lineFlow {
   0% {
-    top: -120px;
+    transform: translateY(-120px);
   }
   100% {
-    top: 100%;
+    transform: translateY(100vh);
   }
 }
 
