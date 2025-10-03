@@ -251,3 +251,51 @@ const counters = document.querySelectorAll('.counter');
     }, { threshold: 0.5 });
 
     observer.observe(aboutSection);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+/* hide header on scroll*/
+
+let lastScroll = 0;
+const header = document.getElementById('header');
+const scrollThreshold = 5; // Minimum scroll distance to trigger
+
+window.addEventListener('scroll', () => {
+  const currentScroll = window.pageYOffset;
+  
+  // Top pe hamesha show karo
+  if (currentScroll <= 0) {
+    header.classList.remove('hidden');
+    return;
+  }
+  
+  // Chhoti movements ko ignore karo
+  if (Math.abs(currentScroll - lastScroll) < scrollThreshold) {
+    return;
+  }
+  
+  if (currentScroll > lastScroll && currentScroll > 80) {
+    // Scroll down - hide header
+    header.classList.add('hidden');
+  } else if (currentScroll < lastScroll) {
+    // Scroll up - show header
+    header.classList.remove('hidden');
+  }
+  
+  lastScroll = currentScroll;
+});

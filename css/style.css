@@ -103,10 +103,17 @@ p {
 .main-header {
   position: fixed;
   top: 0;
+  background: rgba(255, 255, 255, 0.032);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
   width: 100%;
-  left: 0;
-  background: transparent;
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+header.hidden {
+  transform: translateY(-100%);
 }
 
 .header-inner {
@@ -509,13 +516,27 @@ p {
 /* about us section */
 
 .why-choose-section {
-  background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
-  padding: 100px 20px;
   position: relative;
+  background-image: url(../image/5447242.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 100px 20px;
+  z-index: 1;
+}
+
+.why-choose-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  /* top:0; right:0; bottom:0; left:0; ka shortcut */
+  background: rgba(0, 0, 0, 0.5);
+  /* black overlay with 50% opacity */
+  z-index: -1;
 }
 
 .why-choose-section .container {
-  max-width: 1400px;
+  max-width: 1350px;
   width: 100%;
   margin: 0 auto;
 }
@@ -533,7 +554,13 @@ p {
   letter-spacing: 2px;
   text-transform: uppercase;
   margin-bottom: 15px;
-  display: inline-block;
+
+
+}
+
+.section-title .section-label {
+  text-align: left;
+
 }
 
 .why-choose-section .section-title {
