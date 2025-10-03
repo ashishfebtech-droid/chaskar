@@ -1,9 +1,620 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-  </head>
-  <body></body>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us - Snaplens</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/footer.css" />
+  <link rel="stylesheet" href="css/header.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=SUSE+Mono:ital,wght@0,100..800;1,100..800&family=Syne:wght@400..800&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #0a0a0a;
+      color: #fff;
+    }
+
+    /* Hero Section */
+    .hero-section {
+      background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+        url('https://images.unsplash.com/photo-1423666639041-f56000c27a9a?w=1920&h=600&fit=crop');
+      background-size: cover;
+      background-position: center;
+      height: 400px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      position: relative;
+    }
+
+    .hero-content h1 {
+      font-size: 56px;
+      font-weight: 600;
+      margin-bottom: 15px;
+      color: #fff;
+    }
+
+    .hero-content p {
+      font-size: 18px;
+      color: #d4a574;
+      letter-spacing: 2px;
+    }
+
+    /* Contact Section */
+    .contact-section {
+      max-width: 1350px;
+      margin: 0 auto;
+      padding: 80px 20px;
+      display: grid;
+      grid-template-columns: 1fr 1.2fr;
+      gap: 60px;
+    }
+
+    /* Contact Info */
+    .contact-info-wrapper {
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+    }
+
+    .section-title {
+      font-size: 36px;
+      font-weight: 600;
+      margin-bottom: 15px;
+      color: #fff;
+    }
+
+    .section-subtitle {
+      color: #b0b0b0;
+      line-height: 1.7;
+      margin-bottom: 30px;
+    }
+
+    .info-card {
+      background: #1a1a1a;
+      padding: 30px;
+      border-radius: 12px;
+      display: flex;
+      gap: 20px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .info-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 30px rgba(212, 165, 116, 0.2);
+    }
+
+    .info-icon {
+      width: 60px;
+      height: 60px;
+      background: rgba(212, 165, 116, 0.15);
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #d4a574;
+      font-size: 24px;
+      flex-shrink: 0;
+    }
+
+    .info-content h3 {
+      font-size: 20px;
+      margin-bottom: 8px;
+      color: #fff;
+    }
+
+    .info-content p {
+      color: #b0b0b0;
+      font-size: 15px;
+      line-height: 1.6;
+    }
+
+    .info-content a {
+      color: #b0b0b0;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    .info-content a:hover {
+      color: #d4a574;
+    }
+
+    .social-links {
+      margin-top: 40px;
+    }
+
+    .social-links h3 {
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+
+    .social-icons {
+      display: flex;
+      gap: 15px;
+    }
+
+    .social-icon {
+      width: 50px;
+      height: 50px;
+      background: #1a1a1a;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #d4a574;
+      font-size: 20px;
+      transition: all 0.3s ease;
+      cursor: pointer;
+    }
+
+    .social-icon:hover {
+      background: #d4a574;
+      color: #0a0a0a;
+      transform: translateY(-3px);
+    }
+
+    /* Contact Form */
+    .contact-form-wrapper {
+      background: #1a1a1a;
+      padding: 40px;
+      border-radius: 12px;
+    }
+
+    .form-title {
+      font-size: 32px;
+      font-weight: 600;
+      margin-bottom: 10px;
+    }
+
+    .form-subtitle {
+      color: #b0b0b0;
+      margin-bottom: 30px;
+    }
+
+    .form-group {
+      margin-bottom: 25px;
+    }
+
+    .form-group label {
+      display: block;
+      margin-bottom: 8px;
+      color: #fff;
+      font-size: 14px;
+      font-weight: 500;
+    }
+
+    .form-group input,
+    .form-group textarea,
+    .form-group select {
+      width: 100%;
+      padding: 14px 18px;
+      background: #0a0a0a;
+      border: 1px solid #333;
+      border-radius: 8px;
+      color: #fff;
+      font-size: 14px;
+      transition: border-color 0.3s ease;
+    }
+
+    .form-group input:focus,
+    .form-group textarea:focus,
+    .form-group select:focus {
+      outline: none;
+      border-color: #d4a574;
+    }
+
+    .form-group textarea {
+      resize: vertical;
+      min-height: 120px;
+    }
+
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+
+    .submit-btn {
+      width: 100%;
+      padding: 16px;
+      background: #d4a574;
+      border: none;
+      border-radius: 8px;
+      color: #0a0a0a;
+      font-size: 16px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .submit-btn:hover {
+      background: #c99560;
+      transform: translateY(-2px);
+      box-shadow: 0 5px 20px rgba(212, 165, 116, 0.3);
+    }
+
+    /* Map Section */
+    .map-section {
+      width: 100%;
+      height: 450px;
+      margin-top: 60px;
+      display: flex;
+      /* ✅ flex layout */
+      justify-content: center;
+      /* ✅ horizontally center */
+      align-items: center;
+      /* ✅ vertically center if needed */
+      padding: 20px;
+    }
+
+    .map-section iframe {
+      width: 100%;
+      /* ✅ responsive width */
+      max-width: 1350px;
+      /* ✅ max width */
+      height: 100%;
+      border: none;
+      border-radius: 5px;
+      filter: grayscale(100%) invert(92%) contrast(90%);
+    }
+
+    /* Responsive */
+    @media (max-width: 1024px) {
+      .contact-section {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+
+      .hero-content h1 {
+        font-size: 42px;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .hero-section {
+        height: 300px;
+      }
+
+      .hero-content h1 {
+        font-size: 32px;
+      }
+
+      .contact-section {
+        padding: 40px 20px;
+      }
+
+      .form-row {
+        grid-template-columns: 1fr;
+      }
+
+      .section-title {
+        font-size: 28px;
+      }
+
+      .contact-form-wrapper {
+        padding: 30px 20px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header class="main-header" id="header" role="banner">
+    <div class="header-inner container">
+      <!-- Logo -->
+      <div class="logo">
+        <a href="index.html" aria-label="Chaskar Photography Home">
+          <img src="image/logo.png" alt="Chaskar Photography Logo" width="80" height="40" />
+        </a>
+      </div>
+
+      <!-- Navbar -->
+      <nav class="navbar" role="navigation" aria-label="Main navigation">
+        <ul>
+          <li><a href="/" aria-current="page">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="service.html">Service</a></li>
+          <li><a href="portfolio.html">Portfolio</a></li>
+          <li><a href="pages.html">Pages</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </nav>
+
+      <!-- Book Now Button -->
+      <a href="#" class="btn btn-book">Book Now</a>
+
+      <!-- Mobile Menu Toggle -->
+      <button class="menu-toggle" id="menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+  <!-- Hero Section -->
+  <section class="hero-section">
+    <div class="hero-content">
+      <p>GET IN TOUCH</p>
+      <h1>Contact Us</h1>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="contact-section">
+    <!-- Contact Info -->
+    <div class="contact-info-wrapper">
+      <div>
+        <h2 class="section-title">Let's Talk About Your Project</h2>
+        <p class="section-subtitle">
+          We'd love to hear from you! Whether you have a question about our services,
+          need a quote, or just want to say hello, our team is ready to answer all your questions.
+        </p>
+      </div>
+
+      <div class="info-card">
+        <div class="info-icon">
+          <i class="fa-solid fa-location-dot"></i>
+        </div>
+        <div class="info-content">
+          <h3>Our Location</h3>
+          <p>Jl Indah Kenangan No 03<br>Jakarta, Indonesia</p>
+        </div>
+      </div>
+
+      <div class="info-card">
+        <div class="info-icon">
+          <i class="fa-solid fa-phone"></i>
+        </div>
+        <div class="info-content">
+          <h3>Phone Number</h3>
+          <p><a href="tel:+6201681081085">+62 0168 1081 1085</a></p>
+        </div>
+      </div>
+
+      <div class="info-card">
+        <div class="info-icon">
+          <i class="fa-solid fa-envelope"></i>
+        </div>
+        <div class="info-content">
+          <h3>Email Address</h3>
+          <p><a href="mailto:Potio18@gmail.com">Potio18@gmail.com</a></p>
+        </div>
+      </div>
+
+      <div class="social-links">
+        <h3>Follow Us</h3>
+        <div class="social-icons">
+          <div class="social-icon">
+            <i class="fa-brands fa-facebook-f"></i>
+          </div>
+          <div class="social-icon">
+            <i class="fa-brands fa-instagram"></i>
+          </div>
+          <div class="social-icon">
+            <i class="fa-brands fa-twitter"></i>
+          </div>
+          <div class="social-icon">
+            <i class="fa-brands fa-linkedin-in"></i>
+          </div>
+          <div class="social-icon">
+            <i class="fa-brands fa-pinterest-p"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Contact Form -->
+    <div class="contact-form-wrapper">
+      <h2 class="form-title">Send Us a Message</h2>
+      <p class="form-subtitle">Fill out the form below and we'll get back to you as soon as possible.</p>
+
+      <form>
+        <div class="form-row">
+          <div class="form-group">
+            <label>First Name *</label>
+            <input type="text" placeholder="John" required>
+          </div>
+          <div class="form-group">
+            <label>Last Name *</label>
+            <input type="text" placeholder="Doe" required>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label>Email Address *</label>
+            <input type="email" placeholder="john@example.com" required>
+          </div>
+          <div class="form-group">
+            <label>Phone Number</label>
+            <input type="tel" placeholder="+62 xxx xxx xxxx">
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label>Service Interested In</label>
+          <select>
+            <option value="">Select a service</option>
+            <option value="wildlife">Wildlife Photography</option>
+            <option value="sport">Sport Photography</option>
+            <option value="fashion">Fashion Photography</option>
+            <option value="city">City Photography</option>
+            <option value="wedding">Wedding Photography</option>
+            <option value="other">Other</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label>Your Message *</label>
+          <textarea placeholder="Tell us about your project..." required></textarea>
+        </div>
+
+        <button type="submit" class="submit-btn">Send Message</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Map Section -->
+  <section class="map-section">
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d253840.65788332703!2d106.68942999999999!3d-6.229386999999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f3e945e34b9d%3A0x5371bf0fdad786a2!2sJakarta%2C%20Indonesia!5e0!3m2!1sen!2s!4v1234567890"
+      allowfullscreen="" loading="lazy">
+    </iframe>
+  </section>
+
+
+
+  <footer class="footer-section" role="contentinfo">
+    <!-- Container 1 -->
+    <div class="footer-container-1">
+      <div class="footer-inner-wrapper container">
+
+        <!-- Left -->
+        <div class="footer-left">
+          <!-- Logo -->
+          <div class="logo">
+            <a href="index.html" aria-label="Chaskar Photography Home">
+              <img src="image/logo.png" alt="Chaskar Photography Logo" width="80" height="40" />
+            </a>
+          </div>
+
+          <!-- Paragraph -->
+          <p class="footer-paragraph">
+            Tristique pharetra nunc sed amet non libero. Eget turpis ac pretium amet dapibus pharetra porttitor.
+          </p>
+
+          <!-- Gallery -->
+          <div class="footer-gallery">
+            <h3>Gallery</h3>
+            <div class="gallery-grid">
+              <div class="gallery-item">
+                <img src="https://images.unsplash.com/photo-1511576661531-b34d7da5d0bb?w=200&h=200&fit=crop"
+                  alt="Gallery 1" loading="lazy">
+              </div>
+              <div class="gallery-item">
+                <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=200&h=200&fit=crop"
+                  alt="Gallery 2" loading="lazy">
+              </div>
+              <div class="gallery-item">
+                <img src="https://images.unsplash.com/photo-1519904981063-b0cf448d479e?w=200&h=200&fit=crop"
+                  alt="Gallery 3" loading="lazy">
+              </div>
+              <div class="gallery-item">
+                <img src="https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?w=200&h=200&fit=crop"
+                  alt="Gallery 4" loading="lazy">
+              </div>
+              <div class="gallery-item">
+                <img src="https://images.unsplash.com/photo-1485571354370-3d8c6f0b25e8?w=200&h=200&fit=crop"
+                  alt="Gallery 5" loading="lazy">
+              </div>
+              <div class="gallery-item">
+                <img src="https://images.unsplash.com/photo-1518709268805-4e9042af9f23?w=200&h=200&fit=crop"
+                  alt="Gallery 6" loading="lazy">
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right -->
+        <div class="footer-right">
+          <div class="footer-right-top">
+
+            <!-- Email -->
+            <a href="mailto:Potio18@gmail.com" class="contact-item">
+              <div class="contact-icon">
+                <i class="fa-solid fa-envelope" aria-hidden="true"></i>
+              </div>
+              <div>
+                <div class="contact-label">Email Address</div>
+                <div class="contact-value">Potio18@gmail.com</div>
+              </div>
+            </a>
+
+            <!-- Telephone -->
+            <a href="tel:016810811085" class="contact-item">
+              <div class="contact-icon">
+                <i class="fa-solid fa-phone" aria-hidden="true"></i>
+              </div>
+              <div>
+                <div class="contact-label">Telephone</div>
+                <div class="contact-value">0168 1081 1085</div>
+              </div>
+            </a>
+
+            <!-- Location -->
+            <a href="https://www.google.com/maps/search/?api=1&query=Jl+Indah+Kenangan+No+03+Jakarta" target="_blank"
+              class="contact-item">
+              <div class="contact-icon">
+                <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+              </div>
+              <div>
+                <div class="contact-label">Our Location</div>
+                <div class="contact-value">Jl Indah Kenangan No 03 Jakarta</div>
+              </div>
+            </a>
+          </div>
+
+          <!-- Right Bottom Links -->
+          <div class="footer-right-bottom">
+            <!-- Column 1 -->
+            <div class="footer-links-column">
+              <h3>Explore Us</h3>
+              <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Service</a></li>
+                <li><a href="#">Portfolio</a></li>
+              </ul>
+            </div>
+
+            <!-- Column 2 -->
+            <div class="footer-links-column">
+              <h3>Support</h3>
+              <ul>
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">FAQ</a></li>
+                <li><a href="#">Terms & Conditions</a></li>
+                <li><a href="#">Contact Us</a></li>
+              </ul>
+            </div>
+
+            <!-- Column 3 -->
+            <div class="footer-links-column">
+              <h3>Follow Us</h3>
+              <ul>
+                <li><a href="#">Facebook</a></li>
+                <li><a href="#">Instagram</a></li>
+                <li><a href="#">Twitter</a></li>
+                <li><a href="#">LinkedIn</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+      </div> <!-- footer-inner-wrapper close -->
+    </div> <!-- footer-container-1 close -->
+
+    <!-- Container 2 -->
+    <div class="footer-container-2">
+      <div class="footer-bottom-content container">
+        <p class="copyright">Photography Portfolio "Snaplens" © 2025. All rights reserved</p>
+      </div>
+    </div>
+  </footer>
+</body>
+
 </html>

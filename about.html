@@ -1,11 +1,831 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-</head>
-<body>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Us - Chaskar Photography</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/footer.css" />
+  <link rel="stylesheet" href="css/header.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=SUSE+Mono:ital,wght@0,100..800;1,100..800&family=Syne:wght@400..800&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <style>
+    /* About Page Specific Styles */
+
+/* About Hero Section */
+.about-hero {
+  height: 60vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+              url('https://images.unsplash.com/photo-1554048612-b6a482bc67e5?w=1200&h=800&fit=crop');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+ 
+}
+
+.about-hero-content h1 {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+  color: var(--primary-color);
+}
+
+.about-hero-content p {
+  font-size: 1.2rem;
+  opacity: 0.9;
+}
+
+/* Mission Vision Section */
+.mission-vision-section {
+  padding: 100px 0;
+  background: #1a1a1a;
+}
+
+.mission-vision-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.mission-card,
+.vision-card,
+.values-card {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 50px 30px;
+  border-radius: 15px;
+  text-align: center;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+}
+
+.mission-card:hover,
+.vision-card:hover,
+.values-card:hover {
+  transform: translateY(-10px);
+  border-color: var(--primary-color);
+}
+
+.mission-vision-grid .icon {
+  font-size: 3rem;
+  color: var(--primary-color);
+  margin-bottom: 20px;
+}
+
+.mission-vision-grid h3 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  color: white;
+}
+
+.mission-vision-grid p {
+  color: #b0b0b0;
+  line-height: 1.6;
+}
+
+/* Team Section */
+.team-section {
+  padding: 100px 0;
+  background: #000;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.section-label {
+  color: var(--primary-color);
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 15px;
+  display: block;
+}
+
+.section-title {
+  color: #ffffff;
+  font-size: 3rem;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 20px;
+}
+
+.section-description {
+  color: #b0b0b0;
+  font-size: 1.1rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.team-member {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 15px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.team-member:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(224, 181, 111, 0.2);
+}
+
+.member-image {
+  position: relative;
+  overflow: hidden;
+  height: 400px;
+}
+
+.member-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.team-member:hover .member-image img {
+  transform: scale(1.1);
+}
+
+.social-links {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+
+.team-member:hover .social-links {
+  opacity: 1;
+}
+
+.social-links a {
+  width: 40px;
+  height: 40px;
+  background: var(--primary-color);
+  color: #000;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.social-links a:hover {
+  background: #fff;
+  transform: scale(1.1);
+}
+
+.member-info {
+  padding: 30px;
+  text-align: center;
+}
+
+.member-info h3 {
+  font-size: 1.5rem;
+  margin-bottom: 5px;
+  color: white;
+}
+
+.member-info .role {
+  color: var(--primary-color);
+  font-weight: 600;
+  margin-bottom: 15px;
+  display: block;
+}
+
+.member-info p {
+  color: #b0b0b0;
+  line-height: 1.6;
+}
+
+/* Journey Timeline */
+.journey-section {
+  padding: 100px 0;
+  background: #1a1a1a;
+}
+
+.timeline {
+  max-width: 800px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 2px;
+  height: 100%;
+  background: var(--primary-color);
+}
+
+.timeline-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 60px;
+  position: relative;
+}
+
+.timeline-item:nth-child(odd) {
+  flex-direction: row-reverse;
+}
+
+.timeline-year {
+  flex: 0 0 100px;
+  text-align: center;
+  background: var(--primary-color);
+  color: #000;
+  padding: 10px;
+  border-radius: 25px;
+  font-weight: bold;
+  font-size: 1.1rem;
+  z-index: 2;
+}
+
+.timeline-content {
+  flex: 1;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 30px;
+  border-radius: 10px;
+  margin: 0 30px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.timeline-content h3 {
+  color: white;
+  margin-bottom: 10px;
+  font-size: 1.3rem;
+}
+
+.timeline-content p {
+  color: #b0b0b0;
+  line-height: 1.6;
+}
+
+/* Testimonials Section */
+.testimonials-section {
+  padding: 100px 0;
+  background: #000;
+}
+
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.testimonial-card {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 40px 30px;
+  border-radius: 15px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--primary-color);
+}
+
+.quote-icon {
+  font-size: 4rem;
+  color: var(--primary-color);
+  line-height: 1;
+  margin-bottom: 20px;
+  opacity: 0.5;
+}
+
+.testimonial-card p {
+  color: #b0b0b0;
+  font-style: italic;
+  line-height: 1.6;
+  margin-bottom: 25px;
+}
+
+.client-info h4 {
+  color: white;
+  margin-bottom: 5px;
+  font-size: 1.1rem;
+}
+
+.client-info span {
+  color: var(--primary-color);
+  font-size: 0.9rem;
+}
+
+/* CTA Section */
+.about-cta {
+  padding: 100px 0;
+  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+              url('https://images.unsplash.com/photo-1452587925148-ce544e77e70d?w=1200&h=600&fit=crop');
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+}
+
+.cta-content h2 {
+  font-size: 3rem;
+  color: white;
+  margin-bottom: 20px;
+}
+
+.cta-content p {
+  font-size: 1.2rem;
+  color: #b0b0b0;
+  margin-bottom: 40px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.cta-buttons {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.btn-secondary {
+  background: transparent;
+  color: white;
+  border: 2px solid white;
+}
+
+.btn-secondary:hover {
+  background: white;
+  color: #000;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .about-hero {
+    height: 50vh;
+    margin-top: 80px;
+  }
   
+  .about-hero-content h1 {
+    font-size: 2.5rem;
+  }
+  
+  .section-title {
+    font-size: 2rem;
+  }
+  
+  .timeline::before {
+    left: 30px;
+  }
+  
+  .timeline-item {
+    flex-direction: row !important;
+    align-items: flex-start;
+  }
+  
+  .timeline-year {
+    flex: 0 0 80px;
+    margin-right: 20px;
+  }
+  
+  .timeline-content {
+    margin: 0;
+    flex: 1;
+  }
+  
+  .cta-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .cta-buttons .btn {
+    width: 200px;
+  }
+}
+
+@media (max-width: 480px) {
+  .mission-vision-grid,
+  .team-grid,
+  .testimonials-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .about-hero-content h1 {
+    font-size: 2rem;
+  }
+  
+  .cta-content h2 {
+    font-size: 2rem;
+  }
+}
+  </style>
+
+</head>
+
+<body>
+  <!-- Header -->
+  <header class="main-header" id="header" role="banner">
+    <div class="header-inner container">
+      <!-- Logo -->
+      <div class="logo">
+        <a href="index.html" aria-label="Chaskar Photography Home">
+          <img src="image/logo.png" alt="Chaskar Photography Logo" width="80" height="40" />
+        </a>
+      </div>
+
+      <!-- Navbar -->
+      <nav class="navbar" role="navigation" aria-label="Main navigation">
+        <ul>
+          <li><a href="/" aria-current="page">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="service.html">Service</a></li>
+          <li><a href="portfolio.html">Portfolio</a></li>
+          <li><a href="pages.html">Pages</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </nav>
+
+      <!-- Book Now Button -->
+      <a href="#" class="btn btn-book">Book Now</a>
+
+      <!-- Mobile Menu Toggle -->
+      <button class="menu-toggle" id="menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- About Hero Section -->
+  <section class="about-hero">
+    <div class="about-hero-content">
+      <h1>Our Story</h1>
+      <p>Capturing life's most precious moments since 2010</p>
+    </div>
+  </section>
+
+  <!-- Mission Vision Section -->
+  <section class="mission-vision-section">
+    <div class="container">
+      <div class="mission-vision-grid">
+        <div class="mission-card">
+          <div class="icon">
+            <i class="fas fa-bullseye"></i>
+          </div>
+          <h3>Our Mission</h3>
+          <p>To capture authentic moments that tell unique stories, preserving memories that last a lifetime through creative and technical excellence.</p>
+        </div>
+        
+        <div class="vision-card">
+          <div class="icon">
+            <i class="fas fa-eye"></i>
+          </div>
+          <h3>Our Vision</h3>
+          <p>To be the most trusted photography studio that transforms ordinary moments into extraordinary memories for generations to cherish.</p>
+        </div>
+        
+        <div class="values-card">
+          <div class="icon">
+            <i class="fas fa-heart"></i>
+          </div>
+          <h3>Our Values</h3>
+          <p>Creativity, Passion, Authenticity, Professionalism, and Building lasting relationships with our clients.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Team Section -->
+  <section class="team-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">• Meet Our Team</span>
+        <h2 class="section-title">The Creative Minds Behind The Lens</h2>
+        <p class="section-description">A team of passionate photographers dedicated to capturing your special moments</p>
+      </div>
+
+      <div class="team-grid">
+        <div class="team-member">
+          <div class="member-image">
+            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=500&fit=crop" alt="Raj Chaskar - Founder" loading="lazy">
+            <div class="social-links">
+              <a href="#"><i class="fab fa-instagram"></i></a>
+              <a href="#"><i class="fab fa-facebook"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+            </div>
+          </div>
+          <div class="member-info">
+            <h3>Raj Chaskar</h3>
+            <span class="role">Founder & Lead Photographer</span>
+            <p>With over 15 years of experience, Raj specializes in wedding and portrait photography, capturing emotions that tell beautiful stories.</p>
+          </div>
+        </div>
+
+        <div class="team-member">
+          <div class="member-image">
+            <img src="https://images.unsplash.com/photo-1494790108755-2616b612b786?w=400&h=500&fit=crop" alt="Priya Sharma - Creative Director" loading="lazy">
+            <div class="social-links">
+              <a href="#"><i class="fab fa-instagram"></i></a>
+              <a href="#"><i class="fab fa-facebook"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+            </div>
+          </div>
+          <div class="member-info">
+            <h3>Priya Sharma</h3>
+            <span class="role">Creative Director</span>
+            <p>Priya brings artistic vision to every project, specializing in fashion and commercial photography with a unique creative perspective.</p>
+          </div>
+        </div>
+
+        <div class="team-member">
+          <div class="member-image">
+            <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=500&fit=crop" alt="Amit Patel - Senior Photographer" loading="lazy">
+            <div class="social-links">
+              <a href="#"><i class="fab fa-instagram"></i></a>
+              <a href="#"><i class="fab fa-facebook"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+            </div>
+          </div>
+          <div class="member-info">
+            <h3>Amit Patel</h3>
+            <span class="role">Senior Photographer</span>
+            <p>Amit excels in landscape and wildlife photography, bringing nature's beauty to life through his exceptional technical skills.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Journey Timeline -->
+  <section class="journey-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">• Our Journey</span>
+        <h2 class="section-title">Milestones & Achievements</h2>
+      </div>
+
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-year">2010</div>
+          <div class="timeline-content">
+            <h3>Studio Foundation</h3>
+            <p>Started our journey with a small studio and big dreams</p>
+          </div>
+        </div>
+        
+        <div class="timeline-item">
+          <div class="timeline-year">2014</div>
+          <div class="timeline-content">
+            <h3>First International Award</h3>
+            <p>Won "Best Wedding Photography" at International Photography Awards</p>
+          </div>
+        </div>
+        
+        <div class="timeline-item">
+          <div class="timeline-year">2018</div>
+          <div class="timeline-content">
+            <h3>Studio Expansion</h3>
+            <p>Expanded to a larger studio space and added new photography services</p>
+          </div>
+        </div>
+        
+        <div class="timeline-item">
+          <div class="timeline-year">2022</div>
+          <div class="timeline-content">
+            <h3>1000+ Happy Clients</h3>
+            <p>Reached the milestone of serving over 1000 satisfied clients worldwide</p>
+          </div>
+        </div>
+        
+        <div class="timeline-item">
+          <div class="timeline-year">2024</div>
+          <div class="timeline-content">
+            <h3>Digital Transformation</h3>
+            <p>Launched online booking and virtual gallery services</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Client Testimonials -->
+  <section class="testimonials-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">• Testimonials</span>
+        <h2 class="section-title">What Our Clients Say</h2>
+      </div>
+
+      <div class="testimonials-grid">
+        <div class="testimonial-card">
+          <div class="quote-icon">"</div>
+          <p>"Chaskar Photography captured our wedding day perfectly! Every photo tells a story and brings back beautiful memories."</p>
+          <div class="client-info">
+            <h4>Anjali & Rohit</h4>
+            <span>Wedding Clients</span>
+          </div>
+        </div>
+
+        <div class="testimonial-card">
+          <div class="quote-icon">"</div>
+          <p>"Professional, creative, and amazing to work with. Our family portraits came out better than we ever imagined!"</p>
+          <div class="client-info">
+            <h4>The Sharma Family</h4>
+            <span>Portrait Session</span>
+          </div>
+        </div>
+
+        <div class="testimonial-card">
+          <div class="quote-icon">"</div>
+          <p>"The team understood our brand vision perfectly. The commercial photos helped elevate our business to new heights."</p>
+          <div class="client-info">
+            <h4>Design Studio Co.</h4>
+            <span>Commercial Client</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="about-cta">
+    <div class="container">
+      <div class="cta-content">
+        <h2>Ready to Create Beautiful Memories Together?</h2>
+        <p>Let's discuss your photography needs and create something extraordinary</p>
+        <div class="cta-buttons">
+          <a href="contact.html" class="btn btn-primary">Get In Touch</a>
+          <a href="portfolio.html" class="btn btn-secondary">View Portfolio</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+   <footer class="footer-section" role="contentinfo">
+    <!-- Container 1 -->
+    <div class="footer-container-1">
+      <div class="footer-inner-wrapper container">
+
+        <!-- Left -->
+        <div class="footer-left">
+          <!-- Logo -->
+          <div class="logo">
+            <a href="index.html" aria-label="Chaskar Photography Home">
+              <img src="image/logo.png" alt="Chaskar Photography Logo" width="80" height="40" />
+            </a>
+          </div>
+
+          <!-- Paragraph -->
+          <p class="footer-paragraph">
+            Tristique pharetra nunc sed amet non libero. Eget turpis ac pretium amet dapibus pharetra porttitor.
+          </p>
+
+          <!-- Gallery -->
+          <div class="footer-gallery">
+            <h3>Gallery</h3>
+            <div class="gallery-grid">
+              <div class="gallery-item">
+                <img src="https://images.unsplash.com/photo-1511576661531-b34d7da5d0bb?w=200&h=200&fit=crop"
+                  alt="Gallery 1" loading="lazy">
+              </div>
+              <div class="gallery-item">
+                <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=200&h=200&fit=crop"
+                  alt="Gallery 2" loading="lazy">
+              </div>
+              <div class="gallery-item">
+                <img src="https://images.unsplash.com/photo-1519904981063-b0cf448d479e?w=200&h=200&fit=crop"
+                  alt="Gallery 3" loading="lazy">
+              </div>
+              <div class="gallery-item">
+                <img src="https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?w=200&h=200&fit=crop"
+                  alt="Gallery 4" loading="lazy">
+              </div>
+              <div class="gallery-item">
+                <img src="https://images.unsplash.com/photo-1485571354370-3d8c6f0b25e8?w=200&h=200&fit=crop"
+                  alt="Gallery 5" loading="lazy">
+              </div>
+              <div class="gallery-item">
+                <img src="https://images.unsplash.com/photo-1518709268805-4e9042af9f23?w=200&h=200&fit=crop"
+                  alt="Gallery 6" loading="lazy">
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right -->
+        <div class="footer-right">
+          <div class="footer-right-top">
+
+            <!-- Email -->
+            <a href="mailto:Potio18@gmail.com" class="contact-item">
+              <div class="contact-icon">
+                <i class="fa-solid fa-envelope" aria-hidden="true"></i>
+              </div>
+              <div>
+                <div class="contact-label">Email Address</div>
+                <div class="contact-value">Potio18@gmail.com</div>
+              </div>
+            </a>
+
+            <!-- Telephone -->
+            <a href="tel:016810811085" class="contact-item">
+              <div class="contact-icon">
+                <i class="fa-solid fa-phone" aria-hidden="true"></i>
+              </div>
+              <div>
+                <div class="contact-label">Telephone</div>
+                <div class="contact-value">0168 1081 1085</div>
+              </div>
+            </a>
+
+            <!-- Location -->
+            <a href="https://www.google.com/maps/search/?api=1&query=Jl+Indah+Kenangan+No+03+Jakarta" target="_blank"
+              class="contact-item">
+              <div class="contact-icon">
+                <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+              </div>
+              <div>
+                <div class="contact-label">Our Location</div>
+                <div class="contact-value">Jl Indah Kenangan No 03 Jakarta</div>
+              </div>
+            </a>
+          </div>
+
+          <!-- Right Bottom Links -->
+          <div class="footer-right-bottom">
+            <!-- Column 1 -->
+            <div class="footer-links-column">
+              <h3>Explore Us</h3>
+              <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Service</a></li>
+                <li><a href="#">Portfolio</a></li>
+              </ul>
+            </div>
+
+            <!-- Column 2 -->
+            <div class="footer-links-column">
+              <h3>Support</h3>
+              <ul>
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">FAQ</a></li>
+                <li><a href="#">Terms & Conditions</a></li>
+                <li><a href="#">Contact Us</a></li>
+              </ul>
+            </div>
+
+            <!-- Column 3 -->
+            <div class="footer-links-column">
+              <h3>Follow Us</h3>
+              <ul>
+                <li><a href="#">Facebook</a></li>
+                <li><a href="#">Instagram</a></li>
+                <li><a href="#">Twitter</a></li>
+                <li><a href="#">LinkedIn</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+      </div> <!-- footer-inner-wrapper close -->
+    </div> <!-- footer-container-1 close -->
+
+    <!-- Container 2 -->
+    <div class="footer-container-2">
+      <div class="footer-bottom-content container">
+        <p class="copyright">Photography Portfolio "Snaplens" © 2025. All rights reserved</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
 </body>
+
 </html>

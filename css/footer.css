@@ -108,6 +108,12 @@
   transition: var(--transition);
 }
 
+.contact-item,
+.contact-item a,
+.contact-item a * {
+  text-decoration: none !important; /* underline remove forcefully */
+  color: inherit; /* link color container se match kare */
+}
 /* Contact Links */
 .contact-item a {
   color: #b0b0b0;
