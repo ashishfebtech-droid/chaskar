@@ -172,7 +172,7 @@
 }
 
 .footer-links-column a::before {
-  content: '•';
+  content: '>';
   color: var(--primary-color);
   font-size: 18px;
 }
