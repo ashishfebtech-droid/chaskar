@@ -19,7 +19,7 @@ header.hidden {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 20px 0;
+  padding: 20px 10px;
   width: 100%;
   color: #fff;
   border-bottom: 2px solid #fff;
