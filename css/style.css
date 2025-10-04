@@ -426,7 +426,13 @@ p {
   }
 }
 
-/* why choose section */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Why Choose Section */
 .why-choose-section {
   position: relative;
   background-image: url(../image/5447242.jpg);
@@ -472,7 +478,7 @@ p {
 
 .why-choose-section .main-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* ✅ fixed 3 columns */
+  grid-template-columns: repeat(3, 1fr);
   gap: 25px;
 }
 
@@ -558,14 +564,9 @@ p {
   transform: scale(1.1) rotate(5deg);
 }
 
-.why-choose-section .icon-wrapper svg {
-  width: 35px;
-  height: 35px;
-  stroke: var(--primary-color);
-  fill: none;
-  stroke-width: 2;
-  stroke-linecap: round;
-  stroke-linejoin: round;
+.why-choose-section .icon-wrapper i {
+  font-size: 35px;
+  color: var(--primary-color);
 }
 
 .why-choose-section .feature-title {
@@ -849,7 +850,3 @@ p {
     height: 240px;
   }
 }
-
-
-
-

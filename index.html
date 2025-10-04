@@ -1,406 +1,495 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Chaskar Photography - Capturing moments, creating memories"
+    />
+    <title>Chaskar Photography - Professional Photography Services</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/footer.css" />
+    <link rel="stylesheet" href="css/header.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=SUSE+Mono:ital,wght@0,100..800;1,100..800&family=Syne:wght@400..800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Chaskar Photography - Capturing moments, creating memories">
-  <title>Chaskar Photography - Professional Photography Services</title>
-  <link rel="stylesheet" href="css/style.css" />
-  <link rel="stylesheet" href="css/footer.css" />
-  <link rel="stylesheet" href="css/header.css" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=SUSE+Mono:ital,wght@0,100..800;1,100..800&family=Syne:wght@400..800&display=swap"
-    rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
-</head>
-
-<body>
-  <!-- Header -->
-  <header class="main-header" id="header" role="banner">
-    <div class="header-inner container">
-      <!-- Logo -->
-      <div class="logo">
-        <a href="index.html" aria-label="Chaskar Photography Home">
-          <img src="image/logo.png" alt="Chaskar Photography Logo" width="80" height="40" />
-        </a>
-      </div>
-
-      <!-- Navbar -->
-      <nav class="navbar" role="navigation" aria-label="Main navigation">
-        <ul>
-          <li><a href="/" aria-current="page">Home</a></li>
-          <li><a href="about.html">About Us</a></li>
-          <li><a href="service.html">Service</a></li>
-          <li><a href="portfolio.html">Portfolio</a></li>
-          <li><a href="pages.html">Pages</a></li>
-          <li><a href="contact.html">Contact Us</a></li>
-        </ul>
-      </nav>
-
-      <!-- Book Now Button -->
-      <a href="#" class="btn btn-book">Book Now</a>
-
-      <!-- Mobile Menu Toggle -->
-      <button class="menu-toggle" id="menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
-    </div>
-  </header>
-
-  <!-- Hero Section with background carousel -->
-  <section class="hero" role="region" aria-label="Hero section">
-    <div class="wrapper container">
-      <!-- Left Content -->
-      <div class="content-left">
-        <h4 class="subheading">• Capture the Moment</h4>
-        <h1 class="main-heading">Chaskar Photography</h1>
-        <p>At Chaskar, we believe every moment tells a story. Our passion lies in capturing the essence of life—whether
-          it's the joy of a candid smile, the beauty of a breathtaking landscape, or the intimacy of special events.
-          With creativity, precision, and a keen eye for detail, we turn fleeting moments into timeless memories. Our
-          team is dedicated to providing a personalized photography experience that celebrates your unique story, making
-          every shot not just a picture, but a memory to cherish forever.</p>
-        <a href="#" class="btn btn-primary">Know More</a>
-      </div>
-
-      <!-- Right Content (placeholder for image or anything else) -->
-      <div class="content-right">
-        <div class="carousel" aria-label="Photo gallery">
-          <div class="carousel-track" id="right-carousel-track">
-            <!-- JS se images add honge -->
-          </div>
-          <div class="carousel-dots" id="right-carousel-dots" role="tablist"></div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="about-section" role="region" aria-labelledby="about-heading">
-    <div class="about-wrapper container">
-      <!-- Left Side - Images -->
-      <div class="about-images">
-        <img src="image/photographer.jpg" alt="Professional photographer at work" loading="lazy">
-        <img src="image/6.jpg" alt="Photography equipment and setup" loading="lazy">
-      </div>
-
-      <!-- Right Side - Content -->
-      <div class="about-content">
-        <h4 class="subheading">• About Us</h4>
-        <h1 id="about-heading">Through The Lens Exploring My World Of Photography</h1>
-        <p>
-          Tristique pharetra nunc sed amet viverra non non libero. Eget turpis ac pretium amet
-          dapibus nullam at bibendum. Facilisis porttitor quam fames ac hendrerit pellentesque
-          vestibulum porttitor.
-        </p>
-
-        <!-- Stats -->
-        <div class="stats-container">
-          <div class="stat-box">
-            <div class="icon"><i class="fas fa-briefcase" aria-hidden="true"></i></div>
-            <h3><span class="counter" data-target="16">0</span>+</h3>
-            <p>Years Experience</p>
-          </div>
-          <div class="stat-box">
-            <div class="icon"><i class="fas fa-thumbs-up" aria-hidden="true"></i></div>
-            <h3><span class="counter" data-target="386">0</span>+</h3>
-            <p>Happy Clients</p>
-          </div>
-          <div class="stat-box">
-            <div class="icon"><i class="fas fa-camera" aria-hidden="true"></i></div>
-            <h3><span class="counter" data-target="806">0</span>+</h3>
-            <p>Photo Shoot</p>
-          </div>
-        </div>
-
-        <a href="#" class="btn btn-primary">More About Us</a>
-      </div>
-    </div>
-  </section>
-
-  <section class="why-choose-section" role="region" aria-labelledby="why-choose-heading">
-    <div class="container">
-      <div class="section-header">
-        <span class="section-label">• Why Choose Us</span>
-        <h2 id="why-choose-heading" class="section-title">The Compelling Reasons To Select Our Photography</h2>
-      </div>
-
-      <div class="main-grid">
-        <div class="feature-card highlighted">
-          <div class="icon-wrapper">
-            <svg viewBox="0 0 24 24" aria-hidden="true">
-              <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
-              <circle cx="8" cy="10" r="2"></circle>
-              <path d="M2 13l5-5 4 4 6-6 5 5"></path>
-            </svg>
-          </div>
-          <h3 class="feature-title">Professional Quality</h3>
-          <p class="feature-description">Tristique pharetra nunc sed amet viverra non non libero. Eget turpis pretium
-            amet dapibus.</p>
-        </div>
-
-        <div class="feature-card">
-          <div class="icon-wrapper">
-            <svg viewBox="0 0 24 24" aria-hidden="true">
-              <circle cx="12" cy="12" r="3"></circle>
-              <path d="M12 1v6m0 6v6m5.2-14.8l-4.2 4.2m0 6l-4.2 4.2M23 12h-6m-6 0H1m14.8 5.2l-4.2-4.2m0-6l-4.2-4.2">
-              </path>
-            </svg>
-          </div>
-          <h3 class="feature-title">Focus On Branding</h3>
-          <p class="feature-description">Tristique pharetra nunc sed amet viverra non non libero. Eget turpis pretium
-            amet dapibus.</p>
-        </div>
-
-        <div class="feature-card">
-          <div class="icon-wrapper">
-            <svg viewBox="0 0 24 24" aria-hidden="true">
-              <path
-                d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z">
-              </path>
-            </svg>
-          </div>
-          <h3 class="feature-title">Useful For Needs</h3>
-          <p class="feature-description">Tristique pharetra nunc sed amet viverra non non libero. Eget turpis pretium
-            amet dapibus.</p>
-        </div>
-
-        <div class="feature-card">
-          <div class="icon-wrapper">
-            <svg viewBox="0 0 24 24" aria-hidden="true">
-              <circle cx="12" cy="12" r="10"></circle>
-              <path d="M8 14s1.5 2 4 2 4-2 4-2M9 9h.01M15 9h.01"></path>
-            </svg>
-          </div>
-          <h3 class="feature-title">Position Directions</h3>
-          <p class="feature-description">Tristique pharetra nunc sed amet viverra non non libero. Eget turpis pretium
-            amet dapibus.</p>
-        </div>
-
-        <div class="feature-card">
-          <div class="icon-wrapper">
-            <svg viewBox="0 0 24 24" aria-hidden="true">
-              <circle cx="12" cy="12" r="10"></circle>
-              <path d="M12 6v6l4 2"></path>
-            </svg>
-          </div>
-          <h3 class="feature-title">A Targeted Concept</h3>
-          <p class="feature-description">Tristique pharetra nunc sed amet viverra non non libero. Eget turpis pretium
-            amet dapibus.</p>
-        </div>
-
-        <div class="feature-card">
-          <div class="icon-wrapper">
-            <svg viewBox="0 0 24 24" aria-hidden="true">
-              <path d="M12 19l7-7 3 3-7 7-3-3z"></path>
-              <path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"></path>
-              <path d="M2 2l7.586 7.586"></path>
-              <circle cx="11" cy="11" r="2"></circle>
-            </svg>
-          </div>
-          <h3 class="feature-title">Professional Editing</h3>
-          <p class="feature-description">Tristique pharetra nunc sed amet viverra non non libero. Eget turpis pretium
-            amet dapibus.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="services-section" role="region" aria-labelledby="services-heading">
-    <div class="animated-line line-1" aria-hidden="true"></div>
-    <div class="animated-line line-2" aria-hidden="true"></div>
-    <div class="animated-line line-3" aria-hidden="true"></div>
-
-    <div class="services-wrapper container">
-      <div class="services-content">
-        <div class="service-tag">Service</div>
-        <h1 id="services-heading">Take A Look At Our Offers To Suit Your Needs</h1>
-        <p class="services-description">
-          Tristique pharetra nunc sed amet viverra non non libero. Eget turpis ac pretium amet dapibus nullam at
-          bibendum. Facilisis porttitor quam fames ac hendrerit pellentesque vestibulum porttitor.
-        </p>
-
-        <a href="#" class="btn btn-primary">See All Service</a>
-      </div>
-
-      <div class="services-grid">
-        <div class="service-card">
-          <img src="https://images.unsplash.com/photo-1534802046520-4f27db7f3ae5?w=600&h=600&fit=crop"
-            alt="Wildlife Photography" loading="lazy">
-          <div class="service-overlay">
-            <div class="service-title">Wildlife Photography</div>
-          </div>
-        </div>
-
-        <div class="service-card">
-          <img src="https://images.unsplash.com/photo-1552674605-db6ffd4facb5?w=600&h=600&fit=crop"
-            alt="Sport Photography" loading="lazy">
-          <div class="service-overlay">
-            <div class="service-title">Sport Photography</div>
-          </div>
-        </div>
-
-        <div class="service-card">
-          <img src="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?w=600&h=600&fit=crop"
-            alt="Fashion Photography" loading="lazy">
-          <div class="service-overlay">
-            <div class="service-title">Fashion Photography</div>
-          </div>
-        </div>
-
-        <div class="service-card">
-          <img src="https://images.unsplash.com/photo-1449824913935-59a10b8d2000?w=600&h=600&fit=crop"
-            alt="City Photography" loading="lazy">
-          <div class="service-overlay">
-            <div class="service-title">City Photography</div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-<footer class="footer-section" role="contentinfo">
-  <!-- Container 1 -->
-  <div class="footer-container-1">
-    <div class="footer-inner-wrapper container">
-      
-      <!-- Left -->
-      <div class="footer-left">
+  <body>
+    <!-- Header -->
+    <header class="main-header" id="header" role="banner">
+      <div class="header-inner container">
         <!-- Logo -->
         <div class="logo">
           <a href="index.html" aria-label="Chaskar Photography Home">
-            <img src="image/logo.png" alt="Chaskar Photography Logo" width="80" height="40" />
+            <img
+              src="image/logo.png"
+              alt="Chaskar Photography Logo"
+              width="80"
+              height="40"
+            />
           </a>
         </div>
 
-        <!-- Paragraph -->
-        <p class="footer-paragraph">
-          Tristique pharetra nunc sed amet non libero. Eget turpis ac pretium amet dapibus pharetra porttitor.
-        </p>
+        <!-- Navbar -->
+        <nav class="navbar" role="navigation" aria-label="Main navigation">
+          <ul>
+            <li><a href="/" aria-current="page">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="service.html">Service</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="pages.html">Pages</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </nav>
 
-        <!-- Gallery -->
-        <div class="footer-gallery">
-          <h3>Gallery</h3>
-          <div class="gallery-grid">
-            <div class="gallery-item">
-              <img src="https://images.unsplash.com/photo-1511576661531-b34d7da5d0bb?w=200&h=200&fit=crop"
-                alt="Gallery 1" loading="lazy">
+        <!-- Book Now Button -->
+        <a href="#" class="btn btn-book">Book Now</a>
+
+        <!-- Mobile Menu Toggle -->
+        <button
+          class="menu-toggle"
+          id="menu-toggle"
+          aria-label="Toggle navigation menu"
+          aria-expanded="false"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </header>
+
+    <!-- Hero Section with background carousel -->
+    <section class="hero" role="region" aria-label="Hero section">
+      <div class="wrapper container">
+        <!-- Left Content -->
+        <div class="content-left">
+          <h4 class="subheading">• Capture the Moment</h4>
+          <h1 class="main-heading">Chaskar Photography</h1>
+          <p>
+            At Chaskar, we believe every moment tells a story. Our passion lies
+            in capturing the essence of life—whether it's the joy of a candid
+            smile, the beauty of a breathtaking landscape, or the intimacy of
+            special events. With creativity, precision, and a keen eye for
+            detail, we turn fleeting moments into timeless memories. Our team is
+            dedicated to providing a personalized photography experience that
+            celebrates your unique story, making every shot not just a picture,
+            but a memory to cherish forever.
+          </p>
+          <a href="#" class="btn btn-primary">Know More</a>
+        </div>
+
+        <!-- Right Content (placeholder for image or anything else) -->
+        <div class="content-right">
+          <div class="carousel" aria-label="Photo gallery">
+            <div class="carousel-track" id="right-carousel-track">
+              <!-- JS se images add honge -->
             </div>
-            <div class="gallery-item">
-              <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=200&h=200&fit=crop"
-                alt="Gallery 2" loading="lazy">
+            <div
+              class="carousel-dots"
+              id="right-carousel-dots"
+              role="tablist"
+            ></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section
+      class="about-section"
+      role="region"
+      aria-labelledby="about-heading"
+    >
+      <div class="about-wrapper container">
+        <!-- Left Side - Images -->
+        <div class="about-images">
+          <img
+            src="image/photographer.jpg"
+            alt="Professional photographer at work"
+            loading="lazy"
+          />
+          <img
+            src="image/6.jpg"
+            alt="Photography equipment and setup"
+            loading="lazy"
+          />
+        </div>
+
+        <!-- Right Side - Content -->
+        <div class="about-content">
+          <h4 class="subheading">• About Us</h4>
+          <h1 id="about-heading">
+            Through The Lens Exploring My World Of Photography
+          </h1>
+          <p>
+            Tristique pharetra nunc sed amet viverra non non libero. Eget turpis
+            ac pretium amet dapibus nullam at bibendum. Facilisis porttitor quam
+            fames ac hendrerit pellentesque vestibulum porttitor.
+          </p>
+
+          <!-- Stats -->
+          <div class="stats-container">
+            <div class="stat-box">
+              <div class="icon">
+                <i class="fas fa-briefcase" aria-hidden="true"></i>
+              </div>
+              <h3><span class="counter" data-target="16">0</span>+</h3>
+              <p>Years Experience</p>
             </div>
-            <div class="gallery-item">
-              <img src="https://images.unsplash.com/photo-1519904981063-b0cf448d479e?w=200&h=200&fit=crop"
-                alt="Gallery 3" loading="lazy">
+            <div class="stat-box">
+              <div class="icon">
+                <i class="fas fa-thumbs-up" aria-hidden="true"></i>
+              </div>
+              <h3><span class="counter" data-target="386">0</span>+</h3>
+              <p>Happy Clients</p>
             </div>
-            <div class="gallery-item">
-              <img src="https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?w=200&h=200&fit=crop"
-                alt="Gallery 4" loading="lazy">
+            <div class="stat-box">
+              <div class="icon">
+                <i class="fas fa-camera" aria-hidden="true"></i>
+              </div>
+              <h3><span class="counter" data-target="806">0</span>+</h3>
+              <p>Photo Shoot</p>
             </div>
-            <div class="gallery-item">
-              <img src="https://images.unsplash.com/photo-1485571354370-3d8c6f0b25e8?w=200&h=200&fit=crop"
-                alt="Gallery 5" loading="lazy">
+          </div>
+
+          <a href="#" class="btn btn-primary">More About Us</a>
+        </div>
+      </div>
+    </section>
+
+    <section
+      class="why-choose-section"
+      role="region"
+      aria-labelledby="why-choose-heading"
+    >
+      <div class="container">
+        <div class="section-header">
+          <span class="section-label">• Why Choose Us</span>
+          <h2 id="why-choose-heading" class="section-title">
+            The Compelling Reasons To Select Our Photography
+          </h2>
+        </div>
+
+        <div class="main-grid">
+          <div class="feature-card highlighted">
+            <div class="icon-wrapper">
+              <i class="fas fa-camera"></i>
             </div>
-            <div class="gallery-item">
-              <img src="https://images.unsplash.com/photo-1518709268805-4e9042af9f23?w=200&h=200&fit=crop"
-                alt="Gallery 6" loading="lazy">
+            <h3 class="feature-title">Professional Quality</h3>
+            <p class="feature-description">
+              Tristique pharetra nunc sed amet viverra non non libero. Eget
+              turpis pretium amet dapibus.
+            </p>
+          </div>
+
+          <div class="feature-card">
+            <div class="icon-wrapper">
+              <i class="fas fa-bullseye"></i>
+            </div>
+            <h3 class="feature-title">Focus On Branding</h3>
+            <p class="feature-description">
+              Tristique pharetra nunc sed amet viverra non non libero. Eget
+              turpis pretium amet dapibus.
+            </p>
+          </div>
+
+          <div class="feature-card">
+            <div class="icon-wrapper">
+              <i class="fas fa-heart"></i>
+            </div>
+            <h3 class="feature-title">Useful For Needs</h3>
+            <p class="feature-description">
+              Tristique pharetra nunc sed amet viverra non non libero. Eget
+              turpis pretium amet dapibus.
+            </p>
+          </div>
+
+          <div class="feature-card">
+            <div class="icon-wrapper">
+              <i class="fas fa-smile"></i>
+            </div>
+            <h3 class="feature-title">Position Directions</h3>
+            <p class="feature-description">
+              Tristique pharetra nunc sed amet viverra non non libero. Eget
+              turpis pretium amet dapibus.
+            </p>
+          </div>
+
+          <div class="feature-card">
+            <div class="icon-wrapper">
+              <i class="fas fa-clock"></i>
+            </div>
+            <h3 class="feature-title">A Targeted Concept</h3>
+            <p class="feature-description">
+              Tristique pharetra nunc sed amet viverra non non libero. Eget
+              turpis pretium amet dapibus.
+            </p>
+          </div>
+
+          <div class="feature-card">
+            <div class="icon-wrapper">
+              <i class="fas fa-magic"></i>
+            </div>
+            <h3 class="feature-title">Professional Editing</h3>
+            <p class="feature-description">
+              Tristique pharetra nunc sed amet viverra non non libero. Eget
+              turpis pretium amet dapibus.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section
+      class="services-section"
+      role="region"
+      aria-labelledby="services-heading"
+    >
+      <div class="animated-line line-1" aria-hidden="true"></div>
+      <div class="animated-line line-2" aria-hidden="true"></div>
+      <div class="animated-line line-3" aria-hidden="true"></div>
+
+      <div class="services-wrapper container">
+        <div class="services-content">
+          <div class="service-tag">Service</div>
+          <h1 id="services-heading">
+            Take A Look At Our Offers To Suit Your Needs
+          </h1>
+          <p class="services-description">
+            Tristique pharetra nunc sed amet viverra non non libero. Eget turpis
+            ac pretium amet dapibus nullam at bibendum. Facilisis porttitor quam
+            fames ac hendrerit pellentesque vestibulum porttitor.
+          </p>
+
+          <a href="#" class="btn btn-primary">See All Service</a>
+        </div>
+
+        <div class="services-grid">
+          <div class="service-card">
+            <img
+              src="https://images.unsplash.com/photo-1534802046520-4f27db7f3ae5?w=600&h=600&fit=crop"
+              alt="Wildlife Photography"
+              loading="lazy"
+            />
+            <div class="service-overlay">
+              <div class="service-title">Wildlife Photography</div>
+            </div>
+          </div>
+
+          <div class="service-card">
+            <img
+              src="https://images.unsplash.com/photo-1552674605-db6ffd4facb5?w=600&h=600&fit=crop"
+              alt="Sport Photography"
+              loading="lazy"
+            />
+            <div class="service-overlay">
+              <div class="service-title">Sport Photography</div>
+            </div>
+          </div>
+
+          <div class="service-card">
+            <img
+              src="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?w=600&h=600&fit=crop"
+              alt="Fashion Photography"
+              loading="lazy"
+            />
+            <div class="service-overlay">
+              <div class="service-title">Fashion Photography</div>
+            </div>
+          </div>
+
+          <div class="service-card">
+            <img
+              src="https://images.unsplash.com/photo-1449824913935-59a10b8d2000?w=600&h=600&fit=crop"
+              alt="City Photography"
+              loading="lazy"
+            />
+            <div class="service-overlay">
+              <div class="service-title">City Photography</div>
             </div>
           </div>
         </div>
       </div>
+    </section>
 
-      <!-- Right -->
-      <div class="footer-right">
-        <div class="footer-right-top">
+    <footer class="footer-section" role="contentinfo">
+      <!-- Container 1 -->
+      <div class="footer-container-1">
+        <div class="footer-inner-wrapper container">
+          <!-- Left -->
+          <div class="footer-left">
+            <!-- Logo -->
+            <div class="logo">
+              <a href="index.html" aria-label="Chaskar Photography Home">
+                <img
+                  src="image/logo.png"
+                  alt="Chaskar Photography Logo"
+                  width="80"
+                  height="40"
+                />
+              </a>
+            </div>
 
-          <!-- Email -->
-          <a href="mailto:Potio18@gmail.com" class="contact-item">
-            <div class="contact-icon">
-              <i class="fa-solid fa-envelope" aria-hidden="true"></i>
-            </div>
-            <div>
-              <div class="contact-label">Email Address</div>
-              <div class="contact-value">Potio18@gmail.com</div>
-            </div>
-          </a>
+            <!-- Paragraph -->
+            <p class="footer-paragraph">
+              Tristique pharetra nunc sed amet non libero. Eget turpis ac
+              pretium amet dapibus pharetra porttitor.
+            </p>
 
-          <!-- Telephone -->
-          <a href="tel:016810811085" class="contact-item">
-            <div class="contact-icon">
-              <i class="fa-solid fa-phone" aria-hidden="true"></i>
+            <!-- Gallery -->
+            <div class="footer-gallery">
+              <h3>Gallery</h3>
+              <div class="gallery-grid">
+                <div class="gallery-item">
+                  <img
+                    src="https://images.unsplash.com/photo-1511576661531-b34d7da5d0bb?w=200&h=200&fit=crop"
+                    alt="Gallery 1"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="gallery-item">
+                  <img
+                    src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=200&h=200&fit=crop"
+                    alt="Gallery 2"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="gallery-item">
+                  <img
+                    src="https://images.unsplash.com/photo-1519904981063-b0cf448d479e?w=200&h=200&fit=crop"
+                    alt="Gallery 3"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="gallery-item">
+                  <img
+                    src="https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?w=200&h=200&fit=crop"
+                    alt="Gallery 4"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="gallery-item">
+                  <img
+                    src="https://images.unsplash.com/photo-1485571354370-3d8c6f0b25e8?w=200&h=200&fit=crop"
+                    alt="Gallery 5"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="gallery-item">
+                  <img
+                    src="https://images.unsplash.com/photo-1518709268805-4e9042af9f23?w=200&h=200&fit=crop"
+                    alt="Gallery 6"
+                    loading="lazy"
+                  />
+                </div>
+              </div>
             </div>
-            <div>
-              <div class="contact-label">Telephone</div>
-              <div class="contact-value">0168 1081 1085</div>
-            </div>
-          </a>
+          </div>
 
-          <!-- Location -->
-          <a href="https://www.google.com/maps/search/?api=1&query=Jl+Indah+Kenangan+No+03+Jakarta" target="_blank"
-            class="contact-item">
-            <div class="contact-icon">
-              <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+          <!-- Right -->
+          <div class="footer-right">
+            <div class="footer-right-top">
+              <!-- Email -->
+              <a href="mailto:Vineechaskar@gmail.com" class="contact-item">
+                <div class="contact-icon">
+                  <i class="fa-solid fa-envelope" aria-hidden="true"></i>
+                </div>
+                <div>
+                  <div class="contact-label">Email Address</div>
+                  <div class="contact-value">Vineechaskar@gmail.com</div>
+                </div>
+              </a>
+
+              <!-- Telephone -->
+              <a href="tel:9557867881" class="contact-item">
+                <div class="contact-icon">
+                  <i class="fa-solid fa-phone" aria-hidden="true"></i>
+                </div>
+                <div>
+                  <div class="contact-label">Telephone</div>
+                  <div class="contact-value">+91 9557867881</div>
+                </div>
+              </a>
+
+              <!-- Location -->
+              <a
+                href="https://www.google.com/maps/search/?api=1&query=Jl+Indah+Kenangan+No+03+Jakarta"
+                target="_blank"
+                class="contact-item"
+              >
+                <div class="contact-icon">
+                  <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+                </div>
+                <div>
+                  <div class="contact-label">Our Location</div>
+                  <div class="contact-value">
+                    Mahila MahaVidhyalaya PG College, Behind Shakti Kunj,
+                    Krishna Nagar, Jagjeetpur-249404
+                  </div>
+                </div>
+              </a>
             </div>
-            <div>
-              <div class="contact-label">Our Location</div>
-              <div class="contact-value">Jl Indah Kenangan No 03 Jakarta</div>
+
+            <!-- Right Bottom Links -->
+            <div class="footer-right-bottom">
+              <!-- Column 1 -->
+              <div class="footer-links-column">
+                <h3>Explore Us</h3>
+                <ul>
+                  <li><a href="#">Home</a></li>
+                  <li><a href="#">About Us</a></li>
+                  <li><a href="#">Service</a></li>
+                  <li><a href="#">Portfolio</a></li>
+                </ul>
+              </div>
+
+              <!-- Column 2 -->
+              <div class="footer-links-column">
+                <h3>Support</h3>
+                <ul>
+                  <li><a href="#">Privacy Policy</a></li>
+                  <li><a href="#">FAQ</a></li>
+                  <li><a href="#">Terms & Conditions</a></li>
+                  <li><a href="#">Contact Us</a></li>
+                </ul>
+              </div>
+
+              <!-- Column 3 -->
+              <div class="footer-links-column">
+                <h3>Follow Us</h3>
+                <ul>
+                  <li><a href="#">Facebook</a></li>
+                  <li><a href="#">Instagram</a></li>
+                  <li><a href="#">Twitter</a></li>
+                  <li><a href="#">LinkedIn</a></li>
+                </ul>
+              </div>
             </div>
-          </a>
+          </div>
         </div>
+        <!-- footer-inner-wrapper close -->
+      </div>
+      <!-- footer-container-1 close -->
 
-        <!-- Right Bottom Links -->
-        <div class="footer-right-bottom">
-          <!-- Column 1 -->
-          <div class="footer-links-column">
-            <h3>Explore Us</h3>
-            <ul>
-              <li><a href="#">Home</a></li>
-              <li><a href="#">About Us</a></li>
-              <li><a href="#">Service</a></li>
-              <li><a href="#">Portfolio</a></li>
-            </ul>
-          </div>
-
-          <!-- Column 2 -->
-          <div class="footer-links-column">
-            <h3>Support</h3>
-            <ul>
-              <li><a href="#">Privacy Policy</a></li>
-              <li><a href="#">FAQ</a></li>
-              <li><a href="#">Terms & Conditions</a></li>
-              <li><a href="#">Contact Us</a></li>
-            </ul>
-          </div>
-
-          <!-- Column 3 -->
-          <div class="footer-links-column">
-            <h3>Follow Us</h3>
-            <ul>
-              <li><a href="#">Facebook</a></li>
-              <li><a href="#">Instagram</a></li>
-              <li><a href="#">Twitter</a></li>
-              <li><a href="#">LinkedIn</a></li>
-            </ul>
-          </div>
+      <!-- Container 2 -->
+      <div class="footer-container-2">
+        <div class="footer-bottom-content container">
+          <p class="copyright">
+            &copy; 2025 Chaskar Photography. All rights reserved.
+          </p>
         </div>
       </div>
+    </footer>
 
-    </div> <!-- footer-inner-wrapper close -->
-  </div> <!-- footer-container-1 close -->
-
-  <!-- Container 2 -->
-  <div class="footer-container-2">
-    <div class="footer-bottom-content container">
-      <p class="copyright">Photography Portfolio "Snaplens" © 2025. All rights reserved</p>
-    </div>
-  </div>
-</footer>
-
-  <script src="js/script.js"></script>
-</body>
-
+    <script src="js/script.js"></script>
+  </body>
 </html>
