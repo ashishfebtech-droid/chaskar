@@ -442,6 +442,107 @@
     font-size: 2rem;
   }
 }
+/* Simple Timeline Design */
+.journey-section {
+  padding: 100px 0;
+  background: #1a1a1a;
+}
+
+.timeline {
+  max-width: 800px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 2px;
+  height: 100%;
+  background: var(--primary-color);
+  margin-left: 100px;
+}
+
+.timeline-item {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 50px;
+  position: relative;
+}
+
+.timeline-year {
+  flex: 0 0 80px;
+  text-align: center;
+  background: var(--primary-color);
+  color: #000;
+  padding: 10px 15px;
+  border-radius: 20px;
+  font-weight: bold;
+  font-size: 1rem;
+  z-index: 2;
+  margin-right: 40px;
+  position: relative;
+}
+
+.timeline-year::after {
+  content: '';
+  position: absolute;
+  right: -20px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 0;
+  height: 0;
+  border-left: 10px solid var(--primary-color);
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+}
+
+.timeline-content {
+  flex: 1;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 25px;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.timeline-content h3 {
+  color: white;
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+}
+
+.timeline-content p {
+  color: #b0b0b0;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Mobile Responsive for Simple Timeline */
+@media (max-width: 768px) {
+  .timeline::before {
+    margin-left: 60px;
+  }
+  
+  .timeline-year {
+    flex: 0 0 60px;
+    margin-right: 30px;
+    padding: 8px 12px;
+    font-size: 0.9rem;
+  }
+  
+  .timeline-year::after {
+    right: -15px;
+    border-left: 8px solid var(--primary-color);
+    border-top: 8px solid transparent;
+    border-bottom: 8px solid transparent;
+  }
+  
+  .timeline-content {
+    padding: 20px;
+  }
+}
   </style>
 
 </head>
