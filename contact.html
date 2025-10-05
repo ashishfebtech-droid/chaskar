@@ -22,12 +22,17 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
     />
+    <link
+      href="https://fonts.googleapis.com/css2?family=SUSE+Mono:ital,wght@0,100..800;1,100..800&family=Syne:wght@400..800&display=swap"
+      rel="stylesheet"
+    />
   </head>
 
   <body>
     <!-- Header -->
     <header class="main-header" id="header" role="banner">
       <div class="header-inner container">
+        <!-- Logo -->
         <div class="logo">
           <a href="index.html" aria-label="Chaskar Photography Home">
             <img
@@ -39,19 +44,22 @@
           </a>
         </div>
 
+        <!-- Navbar -->
         <nav class="navbar" role="navigation" aria-label="Main navigation">
           <ul>
-            <li><a href="index.html">Home</a></li>
+            <li><a href="/" aria-current="page">Home</a></li>
             <li><a href="about.html">About Us</a></li>
             <li><a href="service.html">Service</a></li>
             <li><a href="portfolio.html">Portfolio</a></li>
             <li><a href="pages.html">Pages</a></li>
-            <li><a href="contact.html" aria-current="page">Contact Us</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
           </ul>
         </nav>
 
+        <!-- Book Now Button -->
         <a href="#" class="btn btn-book">Book Now</a>
 
+        <!-- Mobile Menu Toggle -->
         <button
           class="menu-toggle"
           id="menu-toggle"
