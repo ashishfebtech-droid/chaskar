@@ -3,8 +3,8 @@
   --primary-gold-dark: #d4a574;
   --dark-bg: #000000;
   --darker-bg: #111;
-  --card-bg: rgba(255, 255, 255, 0.03);
-  --card-border: rgba(255, 255, 255, 0.1);
+  --card-bg: rgba(255, 255, 255, 0.112);
+  --card-border: rgba(255, 255, 255, 0.138);
   --text-light: #ffffff;
   --text-gray: rgba(255, 255, 255, 0.7);
   --text-muted: rgba(255, 255, 255, 0.5);
@@ -430,14 +430,16 @@
     padding: 25px 20px;
   }
 
-  
+
   .contact-info-card {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 15px;
   }
-  .contact-info-card h3,p{
+
+  .contact-info-card h3,
+  p {
     text-align: center;
   }
 

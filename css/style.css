@@ -192,6 +192,7 @@ body {
   .wrapper {
     flex-direction: column;
     gap: 30px;
+
   }
 
   .content-left h1 {
@@ -208,6 +209,11 @@ body {
   .content-left,
   .content-right {
     width: 100%;
+
+  }
+
+  .content-left {
+    padding-top: 150px;
   }
 
   .content-right {
@@ -310,7 +316,7 @@ body {
 }
 
 .about-content h1 {
-    font-size: clamp(2.5rem, 5vw, 3.5rem);
+  font-size: clamp(2.5rem, 5vw, 3.5rem);
   color: var(--primary-color);
   margin-bottom: 10px;
   font-weight: 700;
@@ -756,8 +762,8 @@ body {
   gap: 8px;
 }
 
-.services-content h1{
-    font-size: clamp(2.5rem, 5vw, 3.5rem);
+.services-content h1 {
+  font-size: clamp(2.5rem, 5vw, 3.5rem);
   color: var(--primary-color);
   margin-bottom: 10px;
   font-weight: 700;
