@@ -1,0 +1,693 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Chaskar Photography Services - Wedding, Portrait, Event Photography and more" />
+  <title>Our Services - Chaskar Photography</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/footer.css" />
+  <link rel="stylesheet" href="css/header.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400..800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <style>
+    /* ============= SERVICES PAGE ============= */
+
+/* Services Hero Section */
+.services-hero {
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url('https://images.unsplash.com/photo-1606216794074-735e91aa2c92?w=1920');
+  background-size: cover;
+  background-position: center;
+  height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.services-hero-content {
+  animation: fadeInUp 0.8s ease;
+}
+
+.services-hero-content h1 {
+  font-size: clamp(2.5rem, 5vw, 3.5rem);
+  font-weight: 700;
+  color: #fff;
+  margin: 15px 0;
+}
+
+.services-hero-content p {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 18px;
+  margin: 0;
+}
+
+/* Services Category Section */
+.services-category-section {
+  padding: 80px 0;
+  background: #0a0a0a;
+}
+
+.services-category-section:nth-child(even) {
+  background: #111;
+}
+
+.services-category-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.services-category-title {
+  font-size: clamp(1.8rem, 4vw, 2.5rem);
+  font-weight: 700;
+  color: var(--primary, #e0b56f);
+  position: relative;
+  display: inline-block;
+  padding-bottom: 15px;
+}
+
+.services-category-title::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 3px;
+  background: var(--primary, #e0b56f);
+}
+
+/* Services List Grid */
+.services-list-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.service-list-item {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 20px 25px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  transition: all 0.3s ease;
+}
+
+.service-list-item:hover {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: rgba(212, 165, 116, 0.3);
+  transform: translateX(10px);
+}
+
+.service-list-item i {
+  color: var(--primary, #e0b56f);
+  font-size: 20px;
+  flex-shrink: 0;
+}
+
+.service-list-item span {
+  color: #fff;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+/* Service Features Section */
+.service-features-section {
+  padding: 100px 0;
+  background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);
+}
+
+.service-features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 40px;
+}
+
+.service-feature-box {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 50px 40px;
+  border-radius: 20px;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.service-feature-box:hover {
+  border-color: rgba(212, 165, 116, 0.3);
+  box-shadow: 0 10px 40px rgba(212, 165, 116, 0.2);
+  transform: translateY(-10px);
+}
+
+.service-feature-icon {
+  width: 80px;
+  height: 80px;
+  background: rgba(212, 165, 116, 0.15);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 30px;
+  transition: all 0.3s ease;
+}
+
+.service-feature-box:hover .service-feature-icon {
+  background: rgba(212, 165, 116, 0.25);
+  transform: scale(1.1) rotate(10deg);
+}
+
+.service-feature-icon i {
+  font-size: 36px;
+  color: var(--primary, #e0b56f);
+}
+
+.service-feature-box h3 {
+  font-size: 24px;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 25px;
+}
+
+.service-feature-list {
+  list-style: none;
+  text-align: left;
+}
+
+.service-feature-list li {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 16px;
+  padding: 12px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.service-feature-list li:last-child {
+  border-bottom: none;
+}
+
+.service-feature-list li i {
+  color: var(--primary, #e0b56f);
+  font-size: 14px;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ============= RESPONSIVE ============= */
+@media (max-width: 1024px) {
+  .services-list-grid {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+
+  .service-features-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .services-hero {
+    height: 300px;
+  }
+
+  .services-category-section {
+    padding: 60px 0;
+  }
+
+  .services-list-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .service-list-item {
+    padding: 15px 20px;
+  }
+
+  .service-features-section {
+    padding: 60px 0;
+  }
+
+  .service-feature-box {
+    padding: 40px 30px;
+  }
+}
+
+@media (max-width: 480px) {
+  .services-hero-content h1 {
+    font-size: 2rem;
+  }
+
+  .services-category-title {
+    font-size: 1.5rem;
+  }
+
+  .service-feature-box {
+    padding: 30px 20px;
+  }
+}
+
+  </style>
+</head>
+
+<body>
+  <!-- Header -->
+  <header class="main-header" id="header" role="banner">
+    <div class="header-inner container">
+      <div class="logo">
+        <a href="index.html" aria-label="Chaskar Photography Home">
+          <img src="image/logo.png" alt="Chaskar Photography Logo" width="80" height="40" />
+        </a>
+      </div>
+
+      <nav class="navbar" role="navigation" aria-label="Main navigation">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="service.html" aria-current="page">Service</a></li>
+          <li><a href="portfolio.html">Portfolio</a></li>
+          <li><a href="pages.html">Pages</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </nav>
+
+      <a href="#" class="btn btn-book">Book Now</a>
+
+      <button class="menu-toggle" id="menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Services Hero Section -->
+  <section class="services-hero">
+    <div class="services-hero-content">
+      <span class="section-label">Our Services</span>
+      <h1>Professional Photography Services</h1>
+      <p>Capturing your special moments with expertise and creativity</p>
+    </div>
+  </section>
+
+  <!-- Wedding Photography -->
+  <section class="services-category-section">
+    <div class="container">
+      <div class="services-category-header">
+        <h2 class="services-category-title">Wedding Photography</h2>
+      </div>
+      
+      <div class="services-list-grid">
+        <div class="service-list-item">
+          <i class="fas fa-check-circle"></i>
+          <span>Cinematic Wedding Shoot</span>
+        </div>
+        <div class="service-list-item">
+          <i class="fas fa-check-circle"></i>
+          <span>Wedding Anniversary Shoot</span>
+        </div>
+        <div class="service-list-item">
+          <i class="fas fa-check-circle"></i>
+          <span>Destination Wedding Shoot</span>
+        </div>
+        <div class="service-list-item">
+          <i class="fas fa-check-circle"></i>
+          <span>Drone Shoot</span>
+        </div>
+        <div class="service-list-item">
+          <i class="fas fa-check-circle"></i>
+          <span>Black and White Wedding Shoot</span>
+        </div>
+        <div class="service-list-item">
+          <i class="fas fa-check-circle"></i>
+          <span>Modeling Shoot</span>
+        </div>
+        <div class="service-list-item">
+          <i class="fas fa-check-circle"></i>
+          <span>Post Wedding Shoot</span>
+        </div>
+        <div class="service-list-item">
+          <i class="fas fa-check-circle"></i>
+          <span>Outdoor Wedding Shoot</span>
+        </div>
+        <div class="service-list-item">
+          <i class="fas fa-check-circle"></i>
+          <span>Passport Shoot</span>
+        </div>
+        <div class="service-list-item">
+          <i class="fas fa-check-circle"></i>
+          <span>Traditional Wedding Shoot</span>
+        </div>
+        <div class="service-list-item">
+          <i class="fas fa-check-circle"></i>
+          <span>24 Hours Shoot</span>
+        </div>
+        <div class="service-list-item">
+          <i class="fas fa-check-circle"></i>
+          <span>Candid Wedding Shoot</span>
+        </div>
+        <div class="service-list-item">
+          <i class="fas fa-check-circle"></i>
+          <span>Vintage Wedding Shoot</span>
+        </div>
+        <div class="service-list-item">
+          <i class="fas fa-check-circle"></i>
+          <span>Pre Wedding Shoot</span>
+        </div>
+        <div class="service-list-item">
+          <i class="fas fa-check-circle"></i>
+          <span>Save The Date Shoot</span>
+        </div>
+        <div class="service-list-item">
+          <i class="fas fa-check-circle"></i>
+          <span>Wedding Shoot</span>
+        </div>
+        <div class="service-list-item">
+          <i class="fas fa-check-circle"></i>
+          <span>Teaser Shoot</span>
+        </div>
+        <div class="service-list-item">
+          <i class="fas fa-check-circle"></i>
+          <span>Still Life Shoot</span>
+        </div>
+        <div class="service-list-item">
+          <i class="fas fa-check-circle"></i>
+          <span>Newborn Shoot</span>
+        </div>
+        <div class="service-list-item">
+          <i class="fas fa-check-circle"></i>
+          <span>Event Shoot</span>
+        </div>
+        <div class="service-list-item">
+          <i class="fas fa-check-circle"></i>
+          <span>Landscape Shoot</span>
+        </div>
+        <div class="service-list-item">
+          <i class="fas fa-check-circle"></i>
+          <span>Candid Photography</span>
+        </div>
+        <div class="service-list-item">
+          <i class="fas fa-check-circle"></i>
+          <span>Art Shoot</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Lifestyle Photography -->
+  <section class="services-category-section">
+    <div class="container">
+      <div class="services-category-header">
+        <h2 class="services-category-title">Lifestyle Photography</h2>
+      </div>
+      
+      <div class="services-list-grid">
+        <div class="service-list-item">
+          <i class="fas fa-check-circle"></i>
+          <span>Maternity Shoot</span>
+        </div>
+        <div class="service-list-item">
+          <i class="fas fa-check-circle"></i>
+          <span>Kids Shoot</span>
+        </div>
+        <div class="service-list-item">
+          <i class="fas fa-check-circle"></i>
+          <span>Portrait Shoot</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Commercial Photography -->
+  <section class="services-category-section">
+    <div class="container">
+      <div class="services-category-header">
+        <h2 class="services-category-title">Commercial Photography</h2>
+      </div>
+      
+      <div class="services-list-grid">
+        <div class="service-list-item">
+          <i class="fas fa-check-circle"></i>
+          <span>Fashion Shoot</span>
+        </div>
+        <div class="service-list-item">
+          <i class="fas fa-check-circle"></i>
+          <span>Product Shoot</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Event Photography -->
+  <section class="services-category-section">
+    <div class="container">
+      <div class="services-category-header">
+        <h2 class="services-category-title">Event Photography</h2>
+      </div>
+      
+      <div class="services-list-grid">
+        <div class="service-list-item">
+          <i class="fas fa-check-circle"></i>
+          <span>Seminar Shoot</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Specialized Photography -->
+  <section class="services-category-section">
+    <div class="container">
+      <div class="services-category-header">
+        <h2 class="services-category-title">Specialized Photography</h2>
+      </div>
+      
+      <div class="services-list-grid">
+        <div class="service-list-item">
+          <i class="fas fa-check-circle"></i>
+          <span>Underwater Shoot</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Additional Services -->
+  <section class="services-category-section">
+    <div class="container">
+      <div class="services-category-header">
+        <h2 class="services-category-title">Additional Services</h2>
+      </div>
+      
+      <div class="services-list-grid">
+        <div class="service-list-item">
+          <i class="fas fa-check-circle"></i>
+          <span>Videography</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Service Features -->
+  <section class="service-features-section">
+    <div class="container">
+      <div class="service-features-grid">
+        <div class="service-feature-box">
+          <div class="service-feature-icon">
+            <i class="fas fa-clock"></i>
+          </div>
+          <h3>Delivery Duration</h3>
+          <ul class="service-feature-list">
+            <li><i class="fas fa-check"></i> Less Than 1 Month</li>
+            <li><i class="fas fa-check"></i> 1 - 3 Months</li>
+            <li><i class="fas fa-check"></i> 3 - 5 Months</li>
+          </ul>
+        </div>
+
+        <div class="service-feature-box">
+          <div class="service-feature-icon">
+            <i class="fas fa-money-bill-wave"></i>
+          </div>
+          <h3>Payment Terms</h3>
+          <ul class="service-feature-list">
+            <li><i class="fas fa-check"></i> Upto 50% Advance</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+   <footer class="footer-section" role="contentinfo">
+      <!-- Container 1 -->
+      <div class="footer-container-1">
+        <div class="footer-inner-wrapper container">
+          <!-- Left -->
+          <div class="footer-left">
+            <!-- Logo -->
+            <div class="logo">
+              <a href="index.html" aria-label="Chaskar Photography Home">
+                <img
+                  src="image/logo.png"
+                  alt="Chaskar Photography Logo"
+                  width="80"
+                  height="40"
+                />
+              </a>
+            </div>
+
+            <!-- Paragraph -->
+            <p class="footer-paragraph">
+              Capturing moments, creating memories. Professional photography
+              services for every occasion.
+            </p>
+
+            <!-- Gallery -->
+            <div class="footer-gallery">
+              <h3>Gallery</h3>
+              <div class="gallery-grid">
+                <div class="gallery-item">
+                  <img src="image\1.jpg" alt="Gallery 1" loading="lazy" />
+                </div>
+                <div class="gallery-item">
+                  <img src="image\3.jpg" alt="Gallery 2" loading="lazy" />
+                </div>
+                <div class="gallery-item">
+                  <img src="image\4.jpg" alt="Gallery 3" loading="lazy" />
+                </div>
+                <div class="gallery-item">
+                  <img src="image\5.jpg" alt="Gallery 4" loading="lazy" />
+                </div>
+                <div class="gallery-item">
+                  <img src="image\6.jpg" alt="Gallery 5" loading="lazy" />
+                </div>
+                <div class="gallery-item">
+                  <img
+                    src="image\woman-showing-something-her-hand-shower-confetti (1).jpg"
+                    alt="Gallery 6"
+                    loading="lazy"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right -->
+          <div class="footer-right">
+            <div class="footer-right-top">
+              <!-- Email -->
+              <a href="mailto:Vineechaskar@gmail.com" class="contact-item">
+                <div class="contact-icon">
+                  <i class="fa-solid fa-envelope" aria-hidden="true"></i>
+                </div>
+                <div>
+                  <div class="contact-label">Email Address</div>
+                  <div class="contact-value">Vineechaskar@gmail.com</div>
+                </div>
+              </a>
+
+              <!-- Telephone -->
+              <a href="tel:9557867881" class="contact-item">
+                <div class="contact-icon">
+                  <i class="fa-solid fa-phone" aria-hidden="true"></i>
+                </div>
+                <div>
+                  <div class="contact-label">Telephone</div>
+                  <div class="contact-value">+91 9557867881</div>
+                </div>
+              </a>
+
+              <!-- Location -->
+              <a
+                href="https://maps.app.goo.gl/y3415g6wfBZBuRnp9"
+                target="_blank"
+                class="contact-item"
+              >
+                <div class="contact-icon">
+                  <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+                </div>
+                <div>
+                  <div class="contact-label">Our Location</div>
+                  <div class="contact-value">
+                    Mahila MahaVidhyalaya PG College, Behind Shakti Kunj,
+                    Krishna Nagar, Jagjeetpur-249404
+                  </div>
+                </div>
+              </a>
+            </div>
+
+            <!-- Right Bottom Links -->
+            <div class="footer-right-bottom">
+              <!-- Column 1 -->
+              <div class="footer-links-column">
+                <h3>Explore Us</h3>
+                <ul>
+                  <li><a href="/">Home</a></li>
+                  <li><a href="about.html">About Us</a></li>
+                  <li><a href="service.html">Service</a></li>
+                  <li><a href="#">Portfolio</a></li>
+                </ul>
+              </div>
+
+              <!-- Column 2 -->
+              <div class="footer-links-column">
+                <h3>Support</h3>
+                <ul>
+                  <li><a href="#">Privacy Policy</a></li>
+                  <li><a href="#">FAQ</a></li>
+                  <li><a href="#">Terms & Conditions</a></li>
+                  <li><a href="#">Contact Us</a></li>
+                </ul>
+              </div>
+
+              <!-- Column 3 -->
+              <div class="footer-links-column">
+                <h3>Follow Us</h3>
+                <ul>
+                  <li>
+                    <a href="https://www.facebook.com/chaskarphoto">Facebook</a>
+                  </li>
+                  <li><a href="https://x.com/vineetchaskar1">X Twitter</a></li>
+                  <li>
+                    <a
+                      href="https://www.youtube.com/@chaskarphotography1541/videos"
+                      >YouTube</a
+                    >
+                  </li>
+                  <li>
+                    <a href="https://www.instagram.com/chaskar.photography._/#"
+                      >Instagram</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- footer-inner-wrapper close -->
+      </div>
+      <!-- footer-container-1 close -->
+
+      <!-- Container 2 -->
+      <div class="footer-container-2">
+        <div class="footer-bottom-content container">
+          <p class="copyright">
+            &copy; 2025 Chaskar Photography. All rights reserved.
+          </p>
+        </div>
+      </div>
+    </footer>
+  <script src="js/script.js"></script>
+</body>
+</html>
