@@ -1319,7 +1319,7 @@ body {
 .whatsapp-float {
     position: fixed;
     bottom: 20px;
-    right: 20px;
+    right: 10px;
     background: var(--secondary-color);
     border-radius: 50%;
     width: 60px;
