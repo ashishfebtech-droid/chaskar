@@ -12,6 +12,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400..800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet">
   <style>
     /* ============= SERVICES PAGE ============= */
 
@@ -21,7 +22,7 @@
     url('https://images.unsplash.com/photo-1606216794074-735e91aa2c92?w=1920');
   background-size: cover;
   background-position: center;
-  height: 400px;
+  height: 500px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -222,7 +223,7 @@
 
 @media (max-width: 768px) {
   .services-hero {
-    height: 300px;
+    height: 500px;
   }
 
   .services-category-section {
@@ -266,33 +267,47 @@
 <body>
   <!-- Header -->
   <header class="main-header" id="header" role="banner">
-    <div class="header-inner container">
-      <div class="logo">
-        <a href="index.html" aria-label="Chaskar Photography Home">
-          <img src="image/logo.png" alt="Chaskar Photography Logo" width="80" height="40" />
-        </a>
+      <div class="header-inner container">
+        <!-- Logo -->
+        <div class="logo">
+          <a href="index.html" aria-label="Chaskar Photography Home">
+            <img
+              src="image/logo.png"
+              alt="Chaskar Photography Logo"
+              width="80"
+              height="40"
+              loading="eager"
+            />
+          </a>
+        </div>
+
+        <!-- Navbar -->
+        <nav class="navbar" role="navigation" aria-label="Main navigation">
+          <ul>
+            <li><a href="/" aria-current="page">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="service.html">Service</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </nav>
+
+        <!-- Book Now Button -->
+        <a href="contact.html#contact" class="btn btn-book">Book Now</a>
+
+        <!-- Mobile Menu Toggle -->
+        <button
+          class="menu-toggle"
+          id="menu-toggle"
+          aria-label="Toggle navigation menu"
+          aria-expanded="false"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
       </div>
-
-      <nav class="navbar" role="navigation" aria-label="Main navigation">
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About Us</a></li>
-          <li><a href="service.html" aria-current="page">Service</a></li>
-          <li><a href="portfolio.html">Portfolio</a></li>
-          <li><a href="pages.html">Pages</a></li>
-          <li><a href="contact.html">Contact Us</a></li>
-        </ul>
-      </nav>
-
-      <a href="#" class="btn btn-book">Book Now</a>
-
-      <button class="menu-toggle" id="menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
-    </div>
-  </header>
+    </header>
 
   <!-- Services Hero Section -->
   <section class="services-hero">
@@ -527,7 +542,11 @@
       </div>
     </div>
   </section>
-
+  <div class="whatsapp-float">
+        <a href="https://wa.me/919690212270" target="_blank">
+            <i class="ri-whatsapp-fill"></i>
+        </a>
+    </div>
   <!-- Footer -->
    <footer class="footer-section" role="contentinfo">
       <!-- Container 1 -->

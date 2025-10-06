@@ -14,6 +14,7 @@
     href="https://fonts.googleapis.com/css2?family=SUSE+Mono:ital,wght@0,100..800;1,100..800&family=Syne:wght@400..800&display=swap"
     rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet">
   <style>
     /* About Page Specific Styles */
 
@@ -340,54 +341,16 @@
   font-size: 0.9rem;
 }
 
-/* CTA Section */
-.about-cta {
-  padding: 100px 0;
-  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
-              url('https://images.unsplash.com/photo-1452587925148-ce544e77e70d?w=1200&h=600&fit=crop');
-  background-size: cover;
-  background-position: center;
-  text-align: center;
-}
 
-.cta-content h2 {
-  font-size: 3rem;
-  color: white;
-  margin-bottom: 20px;
-}
 
-.cta-content p {
-  font-size: 1.2rem;
-  color: #b0b0b0;
-  margin-bottom: 40px;
-  max-width: 600px;
-  margin-left: auto;
-  margin-right: auto;
-}
 
-.cta-buttons {
-  display: flex;
-  gap: 20px;
-  justify-content: center;
-  flex-wrap: wrap;
-}
 
-.btn-secondary {
-  background: transparent;
-  color: white;
-  border: 2px solid white;
-}
-
-.btn-secondary:hover {
-  background: white;
-  color: #000;
-}
 
 /* Mobile Responsive */
 @media (max-width: 768px) {
   .about-hero {
     height: 50vh;
-    margin-top: 80px;
+   
   }
   
   .about-hero-content h1 {
@@ -417,14 +380,6 @@
     flex: 1;
   }
   
-  .cta-buttons {
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  .cta-buttons .btn {
-    width: 200px;
-  }
 }
 
 @media (max-width: 480px) {
@@ -438,9 +393,7 @@
     font-size: 2rem;
   }
   
-  .cta-content h2 {
-    font-size: 2rem;
-  }
+
 }
 /* Simple Timeline Design */
 .journey-section {
@@ -550,37 +503,47 @@
 <body>
   <!-- Header -->
   <header class="main-header" id="header" role="banner">
-    <div class="header-inner container">
-      <!-- Logo -->
-      <div class="logo">
-        <a href="index.html" aria-label="Chaskar Photography Home">
-          <img src="image/logo.png" alt="Chaskar Photography Logo" width="80" height="40" />
-        </a>
+      <div class="header-inner container">
+        <!-- Logo -->
+        <div class="logo">
+          <a href="index.html" aria-label="Chaskar Photography Home">
+            <img
+              src="image/logo.png"
+              alt="Chaskar Photography Logo"
+              width="80"
+              height="40"
+              loading="eager"
+            />
+          </a>
+        </div>
+
+        <!-- Navbar -->
+        <nav class="navbar" role="navigation" aria-label="Main navigation">
+          <ul>
+            <li><a href="/" aria-current="page">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="service.html">Service</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </nav>
+
+        <!-- Book Now Button -->
+        <a href="contact.html#contact" class="btn btn-book">Book Now</a>
+
+        <!-- Mobile Menu Toggle -->
+        <button
+          class="menu-toggle"
+          id="menu-toggle"
+          aria-label="Toggle navigation menu"
+          aria-expanded="false"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
       </div>
-
-      <!-- Navbar -->
-      <nav class="navbar" role="navigation" aria-label="Main navigation">
-        <ul>
-          <li><a href="/" aria-current="page">Home</a></li>
-          <li><a href="about.html">About Us</a></li>
-          <li><a href="service.html">Service</a></li>
-          <li><a href="portfolio.html">Portfolio</a></li>
-          <li><a href="pages.html">Pages</a></li>
-          <li><a href="contact.html">Contact Us</a></li>
-        </ul>
-      </nav>
-
-      <!-- Book Now Button -->
-      <a href="#" class="btn btn-book">Book Now</a>
-
-      <!-- Mobile Menu Toggle -->
-      <button class="menu-toggle" id="menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
-    </div>
-  </header>
+    </header>
 
   <!-- About Hero Section -->
   <section class="about-hero">
@@ -786,6 +749,11 @@
       </div>
     </div>
   </section>
+    <div class="whatsapp-float">
+        <a href="https://wa.me/919690212270" target="_blank">
+            <i class="ri-whatsapp-fill"></i>
+        </a>
+    </div>
 
   <footer class="footer-section" role="contentinfo">
       <!-- Container 1 -->

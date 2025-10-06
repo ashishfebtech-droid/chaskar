@@ -8,19 +8,35 @@
       content="Chaskar Photography - Capturing moments, creating memories"
     />
     <title>Chaskar Photography - Professional Photography Services</title>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet">
+
+    <!-- CSS Optimization -->
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/footer.css" />
     <link rel="stylesheet" href="css/header.css" />
+
+    <!-- Font Preload -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=SUSE+Mono:ital,wght@0,100..800;1,100..800&family=Syne:wght@400..800&display=swap"
       rel="stylesheet"
+      media="print"
+      onload="this.media='all'"
     />
+    
+
+    <!-- Font Awesome with Preload -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+      media="print"
+      onload="this.media='all'"
     />
+
+    <!-- Preload Critical Images -->
+    <link rel="preload" href="image/logo.png" as="image" />
+    <link rel="preload" href="image/photographer.jpg" as="image" />
   </head>
 
   <body>
@@ -35,6 +51,7 @@
               alt="Chaskar Photography Logo"
               width="80"
               height="40"
+              loading="eager"
             />
           </a>
         </div>
@@ -46,13 +63,12 @@
             <li><a href="about.html">About Us</a></li>
             <li><a href="service.html">Service</a></li>
             <li><a href="portfolio.html">Portfolio</a></li>
-            <li><a href="pages.html">Pages</a></li>
             <li><a href="contact.html">Contact Us</a></li>
           </ul>
         </nav>
 
         <!-- Book Now Button -->
-        <a href="#" class="btn btn-book">Book Now</a>
+        <a href="contact.html#contact" class="btn btn-book">Book Now</a>
 
         <!-- Mobile Menu Toggle -->
         <button
@@ -116,11 +132,15 @@
             src="image/photographer.jpg"
             alt="Professional photographer at work"
             loading="lazy"
+            width="600"
+            height="400"
           />
           <img
             src="image/6.jpg"
             alt="Photography equipment and setup"
             loading="lazy"
+            width="600"
+            height="400"
           />
         </div>
 
@@ -200,6 +220,8 @@
               src="https://images.unsplash.com/photo-1534802046520-4f27db7f3ae5?w=600&h=600&fit=crop"
               alt="Wildlife Photography"
               loading="lazy"
+              width="600"
+              height="600"
             />
             <div class="service-overlay">
               <div class="service-title">Wildlife Photography</div>
@@ -211,6 +233,8 @@
               src="https://images.unsplash.com/photo-1552674605-db6ffd4facb5?w=600&h=600&fit=crop"
               alt="Sport Photography"
               loading="lazy"
+              width="600"
+              height="600"
             />
             <div class="service-overlay">
               <div class="service-title">Sport Photography</div>
@@ -222,6 +246,8 @@
               src="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?w=600&h=600&fit=crop"
               alt="Fashion Photography"
               loading="lazy"
+              width="600"
+              height="600"
             />
             <div class="service-overlay">
               <div class="service-title">Fashion Photography</div>
@@ -233,6 +259,8 @@
               src="https://images.unsplash.com/photo-1449824913935-59a10b8d2000?w=600&h=600&fit=crop"
               alt="City Photography"
               loading="lazy"
+              width="600"
+              height="600"
             />
             <div class="service-overlay">
               <div class="service-title">City Photography</div>
@@ -398,6 +426,11 @@
         </div>
       </div>
     </section>
+     <div class="whatsapp-float">
+        <a href="https://wa.me/919690212270" target="_blank">
+            <i class="ri-whatsapp-fill"></i>
+        </a>
+    </div>
 
     <footer class="footer-section" role="contentinfo">
       <!-- Container 1 -->
@@ -413,6 +446,7 @@
                   alt="Chaskar Photography Logo"
                   width="80"
                   height="40"
+                  loading="lazy"
                 />
               </a>
             </div>
@@ -428,25 +462,57 @@
               <h3>Gallery</h3>
               <div class="gallery-grid">
                 <div class="gallery-item">
-                  <img src="image\1.jpg" alt="Gallery 1" loading="lazy" />
+                  <img
+                    src="image\1.jpg"
+                    alt="Gallery 1"
+                    loading="lazy"
+                    width="100"
+                    height="100"
+                  />
                 </div>
                 <div class="gallery-item">
-                  <img src="image\3.jpg" alt="Gallery 2" loading="lazy" />
+                  <img
+                    src="image\3.jpg"
+                    alt="Gallery 2"
+                    loading="lazy"
+                    width="100"
+                    height="100"
+                  />
                 </div>
                 <div class="gallery-item">
-                  <img src="image\4.jpg" alt="Gallery 3" loading="lazy" />
+                  <img
+                    src="image\4.jpg"
+                    alt="Gallery 3"
+                    loading="lazy"
+                    width="100"
+                    height="100"
+                  />
                 </div>
                 <div class="gallery-item">
-                  <img src="image\5.jpg" alt="Gallery 4" loading="lazy" />
+                  <img
+                    src="image\5.jpg"
+                    alt="Gallery 4"
+                    loading="lazy"
+                    width="100"
+                    height="100"
+                  />
                 </div>
                 <div class="gallery-item">
-                  <img src="image\6.jpg" alt="Gallery 5" loading="lazy" />
+                  <img
+                    src="image\6.jpg"
+                    alt="Gallery 5"
+                    loading="lazy"
+                    width="100"
+                    height="100"
+                  />
                 </div>
                 <div class="gallery-item">
                   <img
                     src="image\woman-showing-something-her-hand-shower-confetti (1).jpg"
                     alt="Gallery 6"
                     loading="lazy"
+                    width="100"
+                    height="100"
                   />
                 </div>
               </div>
@@ -559,6 +625,11 @@
       </div>
     </footer>
 
-    <script src="js/script.js"></script>
+    <!-- Deferred JavaScript -->
+    <script src="js/script.js" defer></script>
+
+    <!-- Preload for next page -->
+    <link rel="prefetch" href="about.html" />
+    <link rel="prefetch" href="portfolio.html" />
   </body>
 </html>

@@ -1,0 +1,852 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Chaskar Photography - Capturing moments, creating memories" />
+  <title>Chaskar Photography - Professional Photography Services</title>
+  <!-- <link rel="stylesheet" href="css/style.css" /> -->
+  <link rel="stylesheet" href="css/footer.css" />
+  <link rel="stylesheet" href="css/header.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400..800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <style>
+    :root {
+  --primary: #e0b56f;
+  --dark: #1a1a1a;
+  --darker: #0a0a0a;
+  --text: rgba(255, 255, 255, 0.8);
+  --border: rgba(255, 255, 255, 0.1);
+  --spacing: 60px;
+  --radius: 20px;
+  --transition: all 0.3s ease;
+}
+
+/* ============= RESET ============= */
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Syne", sans-serif;
+  line-height: 1.6;
+  color: #fff;
+  overflow-x: hidden;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* ============= UTILITIES ============= */
+.container {
+  max-width: 1350px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* ============= COMMON SECTION STYLES ============= */
+.section {
+  padding: 100px 0;
+  position: relative;
+}
+
+.section-wrapper {
+  display: flex;
+  gap: var(--spacing);
+  align-items: center;
+}
+
+.section-content {
+  flex: 1;
+}
+
+.section-content.centered {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.section-media {
+  flex: 1;
+  display: flex;
+  gap: 20px;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: var(--spacing);
+}
+
+/* ============= TYPOGRAPHY ============= */
+.section-label {
+  color: var(--primary);
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  display: block;
+  margin-bottom: 15px;
+}
+
+.section-label::before {
+  content: '• ';
+}
+
+.section-title {
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 700;
+  line-height: 1.2;
+  color: #fff;
+}
+
+p {
+  color: var(--text);
+  line-height: 1.7;
+  margin-bottom: 20px;
+}
+
+/* ============= BUTTONS ============= */
+.btn {
+  display: inline-block;
+  padding: 16px 40px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: var(--transition);
+  border: 2px solid;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  cursor: pointer;
+}
+
+.btn-primary {
+  background: var(--primary);
+  color: #000;
+  border-color: var(--primary);
+}
+
+.btn-primary:hover {
+  background: transparent;
+  color: var(--primary);
+  transform: translateY(-3px);
+}
+
+.btn-secondary {
+  background: transparent;
+  color: var(--primary);
+  border-color: var(--primary);
+}
+
+.btn-secondary:hover {
+  background: var(--primary);
+  color: #000;
+  transform: translateY(-3px);
+}
+
+.btn-group {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* ============= CARDS (Universal) ============= */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 30px;
+}
+
+.card-grid.cols-2 {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.card-grid.cols-3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(10px);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 40px 30px;
+  transition: var(--transition);
+  position: relative;
+  overflow: hidden;
+}
+
+.card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(224, 181, 111, 0.1), transparent);
+  transition: left 0.6s;
+}
+
+.card:hover::before {
+  left: 100%;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  border-color: rgba(224, 181, 111, 0.3);
+  box-shadow: 0 20px 60px rgba(224, 181, 111, 0.3);
+}
+
+.card i {
+  font-size: 40px;
+  color: var(--primary);
+  margin-bottom: 20px;
+}
+
+.card h3 {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 15px;
+  transition: color 0.3s;
+}
+
+.card:hover h3 {
+  color: var(--primary);
+}
+
+.card.featured {
+  background: linear-gradient(135deg, rgba(224, 181, 111, 0.15), rgba(224, 181, 111, 0.05));
+  border-color: rgba(224, 181, 111, 0.3);
+}
+
+/* Card with Image */
+.card img {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+  border-radius: var(--radius);
+  transition: transform 0.5s;
+}
+
+.card:hover img {
+  transform: scale(1.1);
+}
+
+.card-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 30px;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+}
+
+/* Testimonial Card */
+.card.testimonial blockquote {
+  font-style: italic;
+}
+
+.card.testimonial blockquote::before {
+  content: '"';
+  font-size: 60px;
+  color: var(--primary);
+  opacity: 0.3;
+  display: block;
+  line-height: 1;
+}
+
+.card.testimonial footer {
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(224, 181, 111, 0.2);
+}
+
+.card.testimonial strong {
+  display: block;
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+
+.card.testimonial span {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 14px;
+}
+
+/* ============= STATS ============= */
+.stats-grid {
+  display: flex;
+  gap: 20px;
+  margin: 40px 0;
+  flex-wrap: wrap;
+}
+
+.stat-box {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--border);
+  border-radius: 15px;
+  padding: 30px;
+  flex: 1;
+  min-width: 150px;
+  text-align: center;
+  transition: var(--transition);
+}
+
+.stat-box:hover {
+  background: rgba(224, 181, 111, 0.1);
+  border-color: var(--primary);
+  transform: translateY(-5px);
+}
+
+.stat-box i {
+  font-size: 40px;
+  color: var(--primary);
+  margin-bottom: 15px;
+}
+
+.stat-box h3 {
+  font-size: clamp(2rem, 4vw, 2.5rem);
+  color: var(--primary);
+  font-weight: 700;
+}
+
+/* ============= SPECIFIC SECTIONS ============= */
+.about-section {
+  background: var(--dark);
+}
+
+.about-section .section-media img {
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.about-section .section-media img:first-child {
+  width: 55%;
+  height: 450px;
+  object-fit: cover;
+}
+
+.about-section .section-media img:last-child {
+  width: 45%;
+  height: 350px;
+  margin-top: 50px;
+  object-fit: cover;
+}
+
+.services-section {
+  background: radial-gradient(circle at 15% 20%, rgba(70, 65, 42, 0.85) 0%, transparent 40%),
+              radial-gradient(circle at 85% 30%, rgba(15, 10, 25, 0.75) 0%, transparent 40%),
+              #000;
+}
+
+.why-choose-section {
+  background: url(../image/5447242.jpg) center/cover;
+}
+
+.why-choose-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: -1;
+}
+
+.testimonials-section {
+  background: linear-gradient(135deg, var(--darker), var(--dark));
+}
+
+.testimonials-section::before {
+  content: '';
+  position: absolute;
+  width: 200%;
+  height: 100%;
+  background: radial-gradient(circle, rgba(224, 181, 111, 0.08), transparent 70%);
+  animation: rotate 30s linear infinite;
+}
+
+@keyframes rotate {
+  to { transform: rotate(360deg); }
+}
+
+.cta-section {
+  background: linear-gradient(135deg, var(--darker), var(--dark));
+  border-top: 1px solid rgba(224, 181, 111, 0.2);
+}
+
+.cta-section::before,
+.cta-section::after {
+  content: '';
+  position: absolute;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(224, 181, 111, 0.15), transparent 70%);
+  border-radius: 50%;
+  animation: pulse 8s ease-in-out infinite;
+}
+
+.cta-section::before {
+  top: -50%;
+  right: -10%;
+}
+
+.cta-section::after {
+  bottom: -50%;
+  left: -10%;
+  animation-delay: 4s;
+}
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); opacity: 0.4; }
+  50% { transform: scale(1.3); opacity: 0.6; }
+}
+
+/* ============= RESPONSIVE ============= */
+@media (max-width: 1024px) {
+  .card-grid.cols-3 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .section {
+    padding: 60px 0;
+  }
+
+  .section-wrapper {
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .section-media {
+    flex-direction: column;
+  }
+
+  .about-section .section-media img:first-child,
+  .about-section .section-media img:last-child {
+    width: 100%;
+    height: 300px;
+    margin-top: 0;
+  }
+
+  .card-grid,
+  .card-grid.cols-2,
+  .card-grid.cols-3 {
+    grid-template-columns: 1fr;
+  }
+
+  .btn-group {
+    flex-direction: column;
+  }
+
+  .btn {
+    width: 100%;
+  }
+}
+  </style>
+</head>
+
+<body>
+  <!-- Header -->
+  <header class="main-header" id="header" role="banner">
+    <div class="header-inner container">
+      <div class="logo">
+        <a href="index.html" aria-label="Chaskar Photography Home">
+          <img src="image/logo.png" alt="Chaskar Photography Logo" width="80" height="40" />
+        </a>
+      </div>
+
+      <nav class="navbar" role="navigation" aria-label="Main navigation">
+        <ul>
+          <li><a href="/" aria-current="page">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="service.html">Service</a></li>
+          <li><a href="portfolio.html">Portfolio</a></li>
+          <li><a href="pages.html">Pages</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </nav>
+
+      <a href="#" class="btn btn-book">Book Now</a>
+
+      <button class="menu-toggle" id="menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero" role="region" aria-label="Hero section">
+    <div class="wrapper container">
+      <div class="content-left">
+        <span class="section-label">Capture the Moment</span>
+        <h1 class="main-heading">Chaskar Photography</h1>
+        <p>
+          At Chaskar, we believe every moment tells a story. Our passion lies
+          in capturing the essence of life—whether it's the joy of a candid
+          smile, the beauty of a breathtaking landscape, or the intimacy of
+          special events. With creativity, precision, and a keen eye for
+          detail, we turn fleeting moments into timeless memories.
+        </p>
+        <a href="#" class="btn btn-primary">Know More</a>
+      </div>
+
+      <div class="content-right">
+        <div class="carousel" aria-label="Photo gallery">
+          <div class="carousel-track" id="right-carousel-track"></div>
+          <div class="carousel-dots" id="right-carousel-dots" role="tablist"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section class="section about-section" id="about">
+    <div class="section-wrapper container">
+      <div class="section-media">
+        <img src="image/photographer.jpg" alt="Professional photographer at work" loading="lazy" />
+        <img src="image/6.jpg" alt="Photography equipment and setup" loading="lazy" />
+      </div>
+
+      <div class="section-content">
+        <span class="section-label">About Us</span>
+        <h2 class="section-title">Capturing Life's Beautiful Moments Through Our Lens</h2>
+        <p>
+          We are passionate storytellers dedicated to preserving your most
+          cherished memories. With years of experience and a keen eye for
+          detail, we transform ordinary moments into extraordinary visual
+          narratives. Our commitment to excellence ensures that every
+          photograph reflects the authentic emotions and beauty of your
+          special occasions.
+        </p>
+
+        <div class="stats-grid">
+          <div class="stat-box">
+            <i class="fas fa-briefcase"></i>
+            <h3 class="counter" data-target="16">0+</h3>
+            <p>Years Experience</p>
+          </div>
+          <div class="stat-box">
+            <i class="fas fa-thumbs-up"></i>
+            <h3 class="counter" data-target="386">0+</h3>
+            <p>Happy Clients</p>
+          </div>
+          <div class="stat-box">
+            <i class="fas fa-camera"></i>
+            <h3 class="counter" data-target="806">0+</h3>
+            <p>Photo Shoots</p>
+          </div>
+        </div>
+
+        <a href="#" class="btn btn-primary">More About Us</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section class="section services-section" id="services">
+    <div class="animated-line line-1" aria-hidden="true"></div>
+    <div class="animated-line line-2" aria-hidden="true"></div>
+    <div class="animated-line line-3" aria-hidden="true"></div>
+
+    <div class="section-wrapper container">
+      <div class="section-content">
+        <span class="section-label">Service</span>
+        <h2 class="section-title">Take A Look At Our Offers To Suit Your Needs</h2>
+        <p>
+          From weddings to wildlife, portraits to products, we offer comprehensive
+          photography services tailored to your unique needs. Our experienced team
+          combines technical expertise with artistic vision to deliver stunning results.
+        </p>
+        <a href="#" class="btn btn-primary">See All Service</a>
+      </div>
+
+      <div class="card-grid cols-2">
+        <article class="card service-card">
+          <img src="https://images.unsplash.com/photo-1534802046520-4f27db7f3ae5?w=600&h=600&fit=crop" alt="Wildlife Photography" loading="lazy" />
+          <div class="card-overlay">
+            <h3>Wildlife Photography</h3>
+          </div>
+        </article>
+
+        <article class="card service-card">
+          <img src="https://images.unsplash.com/photo-1552674605-db6ffd4facb5?w=600&h=600&fit=crop" alt="Sport Photography" loading="lazy" />
+          <div class="card-overlay">
+            <h3>Sport Photography</h3>
+          </div>
+        </article>
+
+        <article class="card service-card">
+          <img src="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?w=600&h=600&fit=crop" alt="Fashion Photography" loading="lazy" />
+          <div class="card-overlay">
+            <h3>Fashion Photography</h3>
+          </div>
+        </article>
+
+        <article class="card service-card">
+          <img src="https://images.unsplash.com/photo-1449824913935-59a10b8d2000?w=600&h=600&fit=crop" alt="City Photography" loading="lazy" />
+          <div class="card-overlay">
+            <h3>City Photography</h3>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Choose Section -->
+  <section class="section why-choose-section" id="why-choose">
+    <div class="container">
+      <header class="section-header">
+        <span class="section-label">Why Choose Us</span>
+        <h2 class="section-title">The Compelling Reasons To Select Our Photography</h2>
+      </header>
+
+      <div class="card-grid cols-3">
+        <article class="card featured">
+          <i class="fas fa-camera"></i>
+          <h3>Professional Equipment</h3>
+          <p>
+            We use top-of-the-line cameras, lenses, and lighting equipment to
+            ensure every shot is crystal clear and beautifully composed with
+            stunning detail.
+          </p>
+        </article>
+
+        <article class="card">
+          <i class="fas fa-award"></i>
+          <h3>Award-Winning Team</h3>
+          <p>
+            Our experienced photographers have won multiple awards and have
+            years of expertise in capturing life's most precious moments with
+            creativity and precision.
+          </p>
+        </article>
+
+        <article class="card">
+          <i class="fas fa-heart"></i>
+          <h3>Personalized Approach</h3>
+          <p>
+            Every client is unique, and we tailor our services to match your
+            vision, style, and preferences to create truly one-of-a-kind
+            photographs.
+          </p>
+        </article>
+
+        <article class="card">
+          <i class="fas fa-clock"></i>
+          <h3>Quick Turnaround</h3>
+          <p>
+            We deliver professionally edited photos within 7-10 days, ensuring
+            you can relive and share your special moments without unnecessary
+            delays.
+          </p>
+        </article>
+
+        <article class="card">
+          <i class="fas fa-palette"></i>
+          <h3>Expert Editing</h3>
+          <p>
+            Our post-production team uses advanced editing techniques to
+            enhance colors, lighting, and composition while maintaining the
+            natural beauty of every shot.
+          </p>
+        </article>
+
+        <article class="card">
+          <i class="fas fa-handshake"></i>
+          <h3>Affordable Packages</h3>
+          <p>
+            We offer competitive pricing with flexible packages designed to
+            fit every budget, without compromising on quality or
+            professionalism.
+          </p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section class="section testimonials-section" id="testimonials">
+    <div class="container">
+      <header class="section-header">
+        <span class="section-label">Testimonials</span>
+        <h2 class="section-title">What Our Clients Say</h2>
+      </header>
+
+      <div class="card-grid">
+        <article class="card testimonial">
+          <blockquote>
+            <p>Chaskar Photography captured our wedding day perfectly! Every photo tells a story and brings back beautiful memories.</p>
+            <footer>
+              <strong>Anjali & Rohit</strong>
+              <span>Wedding Clients</span>
+            </footer>
+          </blockquote>
+        </article>
+
+        <article class="card testimonial">
+          <blockquote>
+            <p>Professional, creative, and amazing to work with. Our family portraits came out better than we ever imagined!</p>
+            <footer>
+              <strong>The Sharma Family</strong>
+              <span>Portrait Session</span>
+            </footer>
+          </blockquote>
+        </article>
+
+        <article class="card testimonial">
+          <blockquote>
+            <p>The team understood our brand vision perfectly. The commercial photos helped elevate our business to new heights.</p>
+            <footer>
+              <strong>Design Studio Co.</strong>
+              <span>Commercial Client</span>
+            </footer>
+          </blockquote>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="section cta-section">
+    <div class="container">
+      <div class="section-content centered">
+        <h2 class="section-title">Ready to Create Beautiful Memories Together?</h2>
+        <p>Let's discuss your photography needs and create something extraordinary</p>
+        <div class="btn-group">
+          <a href="contact.html" class="btn btn-primary">Get In Touch</a>
+          <a href="portfolio.html" class="btn btn-secondary">View Portfolio</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer-section" role="contentinfo">
+    <div class="footer-container-1">
+      <div class="footer-inner-wrapper container">
+        <div class="footer-left">
+          <div class="logo">
+            <a href="index.html" aria-label="Chaskar Photography Home">
+              <img src="image/logo.png" alt="Chaskar Photography Logo" width="80" height="40" />
+            </a>
+          </div>
+
+          <p class="footer-paragraph">
+            Capturing moments, creating memories. Professional photography services for every occasion.
+          </p>
+
+          <div class="footer-gallery">
+            <h3>Gallery</h3>
+            <div class="gallery-grid">
+              <div class="gallery-item">
+                <img src="https://images.unsplash.com/photo-1511576661531-b34d7da5d0bb?w=200&h=200&fit=crop" alt="Gallery 1" loading="lazy" />
+              </div>
+              <div class="gallery-item">
+                <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=200&h=200&fit=crop" alt="Gallery 2" loading="lazy" />
+              </div>
+              <div class="gallery-item">
+                <img src="https://images.unsplash.com/photo-1519904981063-b0cf448d479e?w=200&h=200&fit=crop" alt="Gallery 3" loading="lazy" />
+              </div>
+              <div class="gallery-item">
+                <img src="https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?w=200&h=200&fit=crop" alt="Gallery 4" loading="lazy" />
+              </div>
+              <div class="gallery-item">
+                <img src="https://images.unsplash.com/photo-1485571354370-3d8c6f0b25e8?w=200&h=200&fit=crop" alt="Gallery 5" loading="lazy" />
+              </div>
+              <div class="gallery-item">
+                <img src="https://images.unsplash.com/photo-1518709268805-4e9042af9f23?w=200&h=200&fit=crop" alt="Gallery 6" loading="lazy" />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-right">
+          <div class="footer-right-top">
+            <a href="mailto:Vineechaskar@gmail.com" class="contact-item">
+              <div class="contact-icon">
+                <i class="fa-solid fa-envelope"></i>
+              </div>
+              <div>
+                <div class="contact-label">Email Address</div>
+                <div class="contact-value">Vineechaskar@gmail.com</div>
+              </div>
+            </a>
+
+            <a href="tel:9557867881" class="contact-item">
+              <div class="contact-icon">
+                <i class="fa-solid fa-phone"></i>
+              </div>
+              <div>
+                <div class="contact-label">Telephone</div>
+                <div class="contact-value">+91 9557867881</div>
+              </div>
+            </a>
+
+            <a href="https://www.google.com/maps/search/?api=1&query=Krishna+Nagar+Jagjeetpur" target="_blank" class="contact-item">
+              <div class="contact-icon">
+                <i class="fa-solid fa-location-dot"></i>
+              </div>
+              <div>
+                <div class="contact-label">Our Location</div>
+                <div class="contact-value">
+                  Mahila MahaVidhyalaya PG College, Behind Shakti Kunj,
+                  Krishna Nagar, Jagjeetpur-249404
+                </div>
+              </div>
+            </a>
+          </div>
+
+          <div class="footer-right-bottom">
+            <div class="footer-links-column">
+              <h3>Explore Us</h3>
+              <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Service</a></li>
+                <li><a href="#">Portfolio</a></li>
+              </ul>
+            </div>
+
+            <div class="footer-links-column">
+              <h3>Support</h3>
+              <ul>
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">FAQ</a></li>
+                <li><a href="#">Terms & Conditions</a></li>
+                <li><a href="#">Contact Us</a></li>
+              </ul>
+            </div>
+
+            <div class="footer-links-column">
+              <h3>Follow Us</h3>
+              <ul>
+                <li><a href="#">Facebook</a></li>
+                <li><a href="#">Instagram</a></li>
+                <li><a href="#">Twitter</a></li>
+                <li><a href="#">LinkedIn</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-container-2">
+      <div class="footer-bottom-content container">
+        <p class="copyright">
+          &copy; 2025 Chaskar Photography. All rights reserved.
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
