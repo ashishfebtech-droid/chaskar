@@ -28,6 +28,7 @@ menuItems.forEach(link => {
 });
 
 
+// Hero Slider - Better Preloading
 const hero = document.querySelector('.hero');
 const images = [
   'image/1.jpg',
@@ -37,21 +38,31 @@ const images = [
   'image/5.jpg',
 ];
 
-// Preload images
+let current = 0;
+let imagesLoaded = 0;
+
+// Better preload with counter
 images.forEach(src => {
   const img = new Image();
+  img.onload = () => {
+    imagesLoaded++;
+    // Jab saari images load ho jaye tab slider start karo
+    if (imagesLoaded === images.length) {
+      startHeroSlider();
+    }
+  };
   img.src = src;
 });
 
-let current = 0;
-
-// Optional: smooth fade
-hero.style.transition = 'background-image 1s ease-in-out';
-
-setInterval(() => {
-  current = (current + 1) % images.length;
-  hero.style.backgroundImage = `url('${images[current]}')`;
-}, 5000);
+// Slider function
+function startHeroSlider() {
+  hero.style.transition = 'background-image 1s ease-in-out';
+  
+  setInterval(() => {
+    current = (current + 1) % images.length;
+    hero.style.backgroundImage = `url('${images[current]}')`;
+  }, 5000);
+}
 
 
 
@@ -324,3 +335,152 @@ window.addEventListener('scroll', () => {
 
 
 
+  // Photo data
+        const photos = [
+            {
+                url: "https://images.unsplash.com/photo-1542038784456-1ea8e935640e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+                title: "Portrait Photography"
+            },
+            {
+                url: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+                title: "Fashion Photography"
+            },
+            {
+                url: "https://images.unsplash.com/photo-1492684223066-81342ee5ff30?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+                title: "Event Photography"
+            },
+            {
+                url: "https://images.unsplash.com/photo-1516035069371-29a1b244cc32?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+                title: "Wedding Photography"
+            },
+            {
+                url: "https://images.unsplash.com/photo-1554048612-b6a482bc67e5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+                title: "Commercial Photography"
+            }
+        ];
+
+        let currentPhotoIndex = 0;
+        let photoTimer;
+
+        // Initialize photo gallery
+        function setupGallery() {
+            const photoContainer = document.getElementById('photoContainer');
+            const photoControls = document.getElementById('photoControls');
+            
+            // Create photo elements
+            photos.forEach((photo, index) => {
+                const photoElement = document.createElement('div');
+                photoElement.className = 'photo-box photo-hidden';
+                photoElement.dataset.index = index;
+                
+                const img = document.createElement('img');
+                img.src = photo.url;
+                img.alt = photo.title;
+                
+                photoElement.appendChild(img);
+                photoContainer.appendChild(photoElement);
+                
+                // Create control dots
+                const dot = document.createElement('div');
+                dot.className = 'control-dot';
+                dot.dataset.index = index;
+                dot.addEventListener('click', () => showPhoto(index));
+                photoControls.appendChild(dot);
+            });
+            
+            // Set initial photo positions
+            updatePhotoDisplay();
+            
+            // Start auto-slide
+            startAutoSlide();
+        }
+
+        // Update photo positions
+        function updatePhotoDisplay() {
+            const photoElements = document.querySelectorAll('.photo-box');
+            const dots = document.querySelectorAll('.control-dot');
+            const totalPhotos = photos.length;
+            
+            photoElements.forEach((element, index) => {
+                // Remove all position classes
+                element.classList.remove('photo-left', 'photo-center', 'photo-right', 'photo-hidden');
+                
+                // Calculate position relative to current photo
+                let position = index - currentPhotoIndex;
+                
+                // Handle looping
+                if (position < -2) position += totalPhotos;
+                if (position > 2) position -= totalPhotos;
+                
+                // Set position classes
+                if (position === -2 || position === totalPhotos - 2) {
+                    element.classList.add('photo-hidden');
+                } else if (position === -1 || position === totalPhotos - 1) {
+                    element.classList.add('photo-left');
+                } else if (position === 0) {
+                    element.classList.add('photo-center');
+                } else if (position === 1 || position === -totalPhotos + 1) {
+                    element.classList.add('photo-right');
+                } else if (position === 2 || position === -totalPhotos + 2) {
+                    element.classList.add('photo-hidden');
+                }
+            });
+            
+            // Update active dot
+            dots.forEach((dot, index) => {
+                dot.classList.toggle('active', index === currentPhotoIndex);
+            });
+        }
+
+        // Show specific photo
+        function showPhoto(index) {
+            currentPhotoIndex = index;
+            updatePhotoDisplay();
+            resetTimer();
+        }
+
+        // Next photo
+        function goNext() {
+            currentPhotoIndex = (currentPhotoIndex + 1) % photos.length;
+            updatePhotoDisplay();
+            resetTimer();
+        }
+
+        // Previous photo
+        function goPrev() {
+            currentPhotoIndex = (currentPhotoIndex - 1 + photos.length) % photos.length;
+            updatePhotoDisplay();
+            resetTimer();
+        }
+
+        // Start auto-slide
+        function startAutoSlide() {
+            photoTimer = setInterval(goNext, 3000);
+        }
+
+        // Stop auto-slide
+        function stopAutoSlide() {
+            clearInterval(photoTimer);
+        }
+
+        // Reset timer
+        function resetTimer() {
+            stopAutoSlide();
+            startAutoSlide();
+        }
+
+        // Initialize gallery when page loads
+        window.addEventListener('load', setupGallery);
+
+        // Pause auto-slide on hover
+        document.querySelector('.photo-showcase').addEventListener('mouseenter', stopAutoSlide);
+        document.querySelector('.photo-showcase').addEventListener('mouseleave', startAutoSlide);
+
+        // Keyboard navigation
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'ArrowLeft') {
+                goPrev();
+            } else if (e.key === 'ArrowRight') {
+                goNext();
+            }
+        });

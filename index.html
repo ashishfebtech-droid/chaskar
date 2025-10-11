@@ -83,11 +83,53 @@
         </button>
       </div>
     </header>
+   
+        <section class="main-section">
+        <div class="bg-effect"></div>
+        
+        <div class="text-content">
+            <p class="welcome-text">Hello, I am Chaskar!</p>
+            <h1 class="main-heading">I believe <span class="gold-text">brevity</span> is key.</h1>
+            <p class="description">My photography captures moments with minimalism and elegance.</p>
+        </div>
+        
+        <div class="photo-showcase">
+            <button class="nav-btn btn-prev" onclick="goPrev()">
+                <i class="fas fa-chevron-left"></i>
+            </button>
+            
+            <div class="photo-container" id="photoContainer">
+                <!-- Photos will be added by JavaScript -->
+            </div>
+            
+            <button class="nav-btn btn-next" onclick="goNext()">
+                <i class="fas fa-chevron-right"></i>
+            </button>
+            
+            <div class="photo-controls" id="photoControls">
+                <!-- Control dots will be added by JavaScript -->
+            </div>
+        </div>
+        
+        <div class="action-btns">
+            <a href="#portfolio" class="action-btn">View Portfolio</a>
+            <a href="#contact" class="action-btn">Book a Session</a>
+        </div>
+        
+        <div class="social-icons">
+            <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="social-link"><i class="fab fa-behance"></i></a>
+            <a href="#" class="social-link"><i class="fab fa-500px"></i></a>
+            <a href="#" class="social-link"><i class="fab fa-pinterest"></i></a>
+        </div>
+    </section>
 
-    <!-- Hero Section with background carousel -->
+
+
+    
     <section class="hero" role="region" aria-label="Hero section">
       <div class="wrapper container">
-        <!-- Left Content -->
+       
         <div class="content-left">
           <h4 class="subheading">• Capture the Moment</h4>
           <h1 class="main-heading">Chaskar Photography</h1>
@@ -104,11 +146,11 @@
           <a href="about.html" class="btn btn-primary">Know More</a>
         </div>
 
-        <!-- Right Content (placeholder for image or anything else) -->
+      
         <div class="content-right">
           <div class="carousel" aria-label="Photo gallery">
             <div class="carousel-track" id="right-carousel-track">
-              <!-- JS se images add honge -->
+           
             </div>
             <div
               class="carousel-dots"
